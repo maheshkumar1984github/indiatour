@@ -25,6 +25,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatListModule} from '@angular/material/list';
+import {MatSelectModule} from '@angular/material/select';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MenuComponent } from './menu/menu.component';
 import {RajasthanComponent} from './rajasthan/rajasthan.component'
@@ -37,6 +38,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { HimachalComponent } from './himachal/himachal.component';
 import { UttarakhandComponent } from './uttarakhand/uttarakhand.component';
 import { JkComponent } from './jk/jk.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,9 @@ import { JkComponent } from './jk/jk.component';
     AdvComponent,
     HimachalComponent,
     UttarakhandComponent,
-    JkComponent
+    JkComponent,
+    RegistrationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -76,7 +81,8 @@ import { JkComponent } from './jk/jk.component';
     MatExpansionModule,
     MatListModule,
     MatGridListModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    MatSelectModule
   ],
 
   providers: [
