@@ -5,6 +5,7 @@ import { DelhiComponent } from './delhi/delhi.component';
 import { HimachalComponent } from './himachal/himachal.component';
 import { UttarakhandComponent } from './uttarakhand/uttarakhand.component';
 import { JkComponent } from './jk/jk.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
 {path: 'rajasthan', component: RajasthanComponent},
@@ -12,7 +13,7 @@ const routes: Routes = [
 {path: 'himachal', component: HimachalComponent},
 {path: 'uttarakhand', component: UttarakhandComponent},
 {path: 'jk', component: JkComponent},
-{path: '', component: DelhiComponent},
+{path: '', component: HomeComponent},
  ];
 
 @NgModule({

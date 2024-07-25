@@ -26,6 +26,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatListModule} from '@angular/material/list';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTabsModule,MatTabGroup} from '@angular/material/tabs';
+
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MenuComponent } from './menu/menu.component';
 import {RajasthanComponent} from './rajasthan/rajasthan.component'
@@ -40,6 +42,8 @@ import { UttarakhandComponent } from './uttarakhand/uttarakhand.component';
 import { JkComponent } from './jk/jk.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { PackagesComponent } from './packages/packages.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,9 @@ import { FooterComponent } from './footer/footer.component';
     UttarakhandComponent,
     JkComponent,
     RegistrationComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent,
+    PackagesComponent
   ],
   imports: [
     BrowserModule,
@@ -82,7 +88,9 @@ import { FooterComponent } from './footer/footer.component';
     MatListModule,
     MatGridListModule,
     SlickCarouselModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTabsModule,
+    MatTabGroup
   ],
 
   providers: [
