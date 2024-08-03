@@ -1,11 +1,11 @@
 // .basic-container {
 //     padding: 64px 64px 400px 64px;
 //   }
-  .version-info {
-    font-size: 8pt;
-    float: right;
-    padding: 8px;
-  }
+  // .version-info {
+  //   font-size: 8pt;
+  //   float: right;
+  //   padding: 8px;
+  // }
   // * {
   //   box-sizing: border-box;
   // }
@@ -13,10 +13,12 @@
   // body {
   //   margin: 0;
   // }
-  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
   .navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #3f51b5;
     font-family: Arial, Helvetica, sans-serif;
   }
   
@@ -27,11 +29,15 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
   }
   
   .dropdown {
     float: left;
     overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
   }
   
   .dropdown .dropbtn {
@@ -46,20 +52,20 @@
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
+    background-color: #5c70df;
   }
   
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #5c70df;
     width: 20%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 100;
   }
   
   .dropdown-content .header {
-    background: red;
+    background: #5c70df;
     padding: 16px;
     color: white;
   }
@@ -73,13 +79,13 @@
     float: left;
     width: 100%;
     padding: 10px;
-    background-color: #ccc;
+    background-color: #5c70df;
     height: auto;
   }
   
   .column a {
     float: none;
-    color: black;
+    color: white;
     padding: 16px;
     text-decoration: none;
     display: block;
@@ -87,20 +93,20 @@
   }
   
   .column a:hover {
-    background-color: #ddd;
+    background-color: #98a4e7;
   }
   
   /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  // .row:after {
+  //   content: "";
+  //   display: table;
+  //   clear: both;
+  // }
   
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      height: auto;
-    }
-  }
+  // @media screen and (max-width: 600px) {
+  //   .column {
+  //     width: 100%;
+  //     height: auto;
+  //   }
+  // }

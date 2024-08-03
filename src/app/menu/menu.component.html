@@ -1,9 +1,28 @@
+<!-- <p>
+  <mat-toolbar color="primary">    
+    <span>My App</span>   
+    <button mat-button [matMenuTriggerFor]="belowMenu" class="">Below</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p> -->
 
 <div class="navbar">
+  <a routerLink="#" style="font-size: 22px; color:orange; font-family: 'Times New Roman', Times, serif;">IndiaTourWithRavi</a> 
   <a routerLink="/home">Home</a> 
   <div class="dropdown">
-    <button class="dropbtn">North India 
-      <i class="fa fa-caret-down"></i>
+    <button class="dropbtn">Destination <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">      
       <div class="row">
@@ -18,7 +37,11 @@
     </div>
   </div> 
 
-  <div class="dropdown">
+  <a routerLink="/home" class="menulink">Packages</a> 
+  <a routerLink="/home" class="menulink">Hotels</a>
+  <a routerLink="/home" class="menulink">About Us</a>  
+
+  <!-- <div class="dropdown">
     <button class="dropbtn">South India
       <i class="fa fa-caret-down"></i>
     </button>
@@ -32,8 +55,8 @@
        </div>       
       </div>
     </div>
-  </div> 
-  <div class="dropdown">
+  </div>  -->
+  <!-- <div class="dropdown">
     <button class="dropbtn">East India
       <i class="fa fa-caret-down"></i>
     </button>
@@ -47,8 +70,8 @@
         </div>       
       </div>
     </div>
-  </div> 
-  <div class="dropdown">
+  </div>  -->
+  <!-- <div class="dropdown">
     <button class="dropbtn">West India
       <i class="fa fa-caret-down"></i>
     </button>
@@ -61,7 +84,7 @@
           </div>
       </div>
     </div>
-  </div> 
+  </div>  
   <div class="dropdown">
     <button class="dropbtn">More..
       <i class="fa fa-caret-down"></i>
@@ -78,7 +101,7 @@
           </div>
       </div>
     </div>
-  </div> 
+  </div> -->
   <div class="contact">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
     <p>+91 8130860059</p>
@@ -88,4 +111,4 @@
   
 </div>
 
-
+ 

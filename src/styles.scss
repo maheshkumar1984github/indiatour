@@ -4,10 +4,14 @@ html, body { height: 100%; }
 body { margin: 0;
    font-family: Roboto, 
    "Helvetica Neue", sans-serif;
-   margin-left: 100px;
-   margin-right: 100px;
-   margin-top: 10px;
-  background-color: #f4f4f4;
+  //  margin-left: 50px;
+  //  margin-right: 50px;
+  //  margin-top: 10px;
+  //width: 90%;
+  // margin-left: 20px;
+  // margin-right: 20px;
+  background-color: whitesmoke;
+  align-items: center;
 }
 .card-body{
     width: 100%;
@@ -77,7 +81,7 @@ body { margin: 0;
 
   .dataimg{
     text-align: left;
-    margin: 20px;
+    margin-top: 2px;
   }
   h3{
     font-family: cursive;
@@ -85,7 +89,8 @@ body { margin: 0;
   }
 
   h1,h2,h3,h4,h5,h6{
-    color: #11bcec;
+    color: #3f51b5;
+    padding: 0;
   }
   .contact{
     float: right; color: white; display: flex;
@@ -94,3 +99,141 @@ body { margin: 0;
     padding: 10px;
   }
   
+// Home page css
+
+.card {
+  width: 100%;
+  height: 400px;
+  padding: 5px;
+  box-shadow:0 4px 16px 0;
+  border-top: 1px solid #1098ad;
+  border-bottom: 1px solid #1098ad;
+  border-radius: 10px;
+}
+
+.card > img {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.card-child {
+  width: 350px;
+  height: 300px;
+  padding: 5px;
+  box-shadow:0 4px 16px 0;
+  border-top: 1px solid #1098ad;
+  border-bottom: 1px solid #1098ad;
+  border-radius: 10px;
+  padding-top: 100px;
+  margin: 50px;
+}
+
+.card-child > img {
+  width: 350px;
+  height: 300px;
+  border-radius: 10px;
+}
+.card-info{
+float: right;
+text-align: center;
+}
+.card-info > li{
+  list-style-type: none;
+  font-weight: 100;
+  color: #1098ad;
+  font-family: sans-serif;
+}
+
+.card-info > p{  
+  font-weight: 100;
+  color: #1098ad;
+  font-family: sans-serif;
+  float: right;
+}
+
+
+.example-card {
+ width: 475px !important;
+ height: 530px;
+ margin: 15px;
+}
+
+ .btnaction{
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 5px;
+  padding-right: 5px;
+  right: 0;
+}
+// .example-header-image {
+// background-image: url('../../assets/images/delhi/akshardham3.jpg');
+// background-size: cover;
+// }
+
+.otherDestinations{
+ display: flex;
+ align-items: center;
+ margin-top: 10px;
+ flex-wrap: wrap;
+//  margin-left: 20px;
+//  margin-right: 20px;
+}
+
+
+.example-card-hotels {
+max-width: 100%;
+height: 400px;
+}
+
+.otherDestinations-hotels{
+align-items: center;
+margin-top: 10px;
+
+}
+
+
+.hotels{
+max-height: 350px;
+box-shadow: 0 4px 4px 0;
+display: flex;
+align-items: center;
+margin-top: 10px;
+flex-wrap: wrap;
+background-color:white;
+margin-right: 20px;
+max-width: 600px;
+}
+.hotels > p {
+font-family: sans-serif;
+text-align: justify;
+}
+
+.cardimg{
+max-width: 500px;
+max-height: 300px;
+object-fit: cover;
+float: left;
+padding: 20px;
+}
+
+
+ .btnhotel {
+  float: right;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+slick-prev:before, .slick-next:before { 
+  color:red !important;
+}
+
+.container{
+  width: 100%;
+  align-items: center;
+}
+
+.areahotels{
+  width: 100%;
+}

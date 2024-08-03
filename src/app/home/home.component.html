@@ -1,327 +1,57 @@
-<div class="row">
-    <div class="card">
-        <img src="../../assets/images/tajmahal.jpeg"/>
-    </div>
+<div class="container">
+<div class="">
+    <div class="" *ngFor="let item of rjdata">
+        <div>
+            <div class="dataimg">
+                <div>                
+                    <ngx-slick-carousel class="carousel" 
+                        #slickModal="slick-carousel" 
+                        [config]="slideConfig" >
+                        <div ngxSlickItem *ngFor="let chileitem of item.childImage" class="slide">
+                        <p>{{chileitem.locationName}}</p>
+                        <img src="{{chileitem.imgSrc}}" alt="" width="100%" height="600px">
+                        <p>{{chileitem.locationDescription}}</p>
+                        </div>
+                        </ngx-slick-carousel>                      
+                </div>
+                <p>{{item.locationDescription}}</p>
+            </div>
+        </div>
+        </div>
 </div>
-<br><br><br>
+<br>
+<div>    
+  <H1>Destinations in India</H1>
 
-<!-- <div class="flipcard">
-    <div class="flipcard-content">
-      <div class="front">
-        Front
-      </div>
-      <div class="back">
-        Back!
-      </div>
-    </div>
-  </div> -->
-<H1>Destinations in India</H1>
-
-<div class="otherDestinations">
+ 
+<div class="otherDestinations">  
+  <div *ngFor="let h of homedata">
     <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Delhi</mat-card-title>
-          <mat-card-subtitle>Akshardham Temple</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/delhi/akshardham2.jpg" class="">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>More Details ...</button>
-        </mat-card-actions>
-      </mat-card>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Rajisthan</mat-card-title>
-          <mat-card-subtitle>Akshardham Temple</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/rajasthan/hawamahal.jpeg">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>More Details ...</button>
-        </mat-card-actions>
-      </mat-card>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Jammu & Kashmir</mat-card-title>
-          <mat-card-subtitle>Dal Lake</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/jk/dallake2.jpeg">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>More Details ...</button>
-        </mat-card-actions>
-      </mat-card>
-      
-</div>
-
-<div class="otherDestinations">
-    <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Uttrakhand</mat-card-title>
-          <mat-card-subtitle>Rishikesh</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/UK/Rishikesh1.jpeg">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>More Details ...</button>
-        </mat-card-actions>
-      </mat-card>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Himachal</mat-card-title>
-          <mat-card-subtitle>Manal</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/Himachal/Manali3.jpg">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>More Details ...</button>
-        </mat-card-actions>
-      </mat-card>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Delhi</mat-card-title>
-          <mat-card-subtitle>Akshardham Temple</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/delhi/akshardham2.jpg">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>More Details ...</button>
-        </mat-card-actions>
-      </mat-card>
-      
-</div>
-<br><br><br>
-<h1>Hotels</h1>
-<div class="otherDestinations-hotels">
-    <div class="hotels">
-        <img mat-card-image src="../../assets/images/delhiHotel.jpg" class="cardimg">
-        <h2>Crowne Plaza, Rohini</h2>
-        <h4>Twin District Centre, Sector - 10, Rohini, Rohini, 110085 New Delhi, India</h4>
-        <p>Located close to the sprawling Japanese Park in the northwest of Delhi, the Crowne Plaza brings the IHG corporation’s international experience to this huge events property. With 183 rooms, it’s one of the larger hotels in the city and in Spice Art, it has one of the most popular upmarket Indian restaurants on the market. Elsewhere, you’ll find a large outdoor pool (rare for New Delhi), a generously equipped gym and a spa with a suitably sprawling treatment menu.</p>
+      <mat-card-header>
+        <mat-card-title>{{h.title}}</mat-card-title>
+        <mat-card-subtitle>{{h.subtitle}}
+          <a href="https://maps.google.com/?addr='28.612894','77.22944'" target="_blank">
+            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="room icon"></mat-icon>
+          </a>
+        </mat-card-subtitle>
         
-        <h3>
-            Popular amenities
-        </h3>
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Outdoor swimming pool
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Very Good Breakfast
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Air conditioning
-           </span>
-        </div> 
-            <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Spa
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Restaurant
-           </span>
-        </div>
-        <div class="btnhotel">
-            <button mat-raised-button color="accent">View Details</button>
-        </div>
-        
-    </div>
-
-    <div class="hotels">
-        <img mat-card-image src="../../assets/images/delhihotel2.jpg" class="cardimg">
-        <h2>Oberoi New Delhi, Golf Links</h2>
-        <h4>The Oberoi, New Delhi, India</h4>
-        <p>“The Icon Returns” read the headlines when this much-lauded property emerged from a $100 million makeover in 2018 — and what a return to form it was. The Indian capital’s most historic hotel is a former palace near Delhi Golf Club, with 220 rooms and staggering views of Unesco heritage site Humayun’s Tomb. It had been looking comparatively fusty against Delhi’s newer crop of luxury hotels but now blends state-of-the-art technology with quietly regal interiors</p>
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Outdoor swimming pool
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Very Good Breakfast
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Air conditioning
-           </span>
-        </div>     
-    </div>
-
-    <div class="hotels">
-        <img mat-card-image src="../../assets/images/Udyapurhotel.jpg" class="cardimg">
-        <h2>Umaid Bhawan Palace Jodhpur</h2>
-        <p>Hotel Umaid Bhawan Palace Jodhpur is a luxurious and royal hotel located in Jodhpur. The palace offers a wide range of facilities including parking, restaurant, bar, sauna, fitness center, garden. The hotel also boasts a museum showcasing the palace's history and vintage cars. Guests can enjoy the beautiful architecture, well-maintained garden, and stunning ambiance. The staff is attentive and friendly, providing excellent service. The palace is a must-visit for those seeking a royal and classy experience. The nearby landmarks include the royal family's residence, a car collection, and other forts in Rajasthan.
+      </mat-card-header>
+      <img mat-card-image src="{{h.imgUrl}}" height="300px" width="460px">
+      <mat-card-content>
+        <p>
+          {{h.description}}
         </p>
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Outdoor swimming pool
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Very Good Breakfast
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Air conditioning
-           </span>
-        </div>     
-    </div>
-
-    <div class="hotels">
-        <img mat-card-image src="../../assets/images/jaipurhotel.jpg" class="cardimg">
-        <h2>Jai Mahal Palace Rajisthan</h2>
-        <p>Hotel Jai Mahal Palace in Jaipur is a luxury heritage property that offers a regal and opulent experience. The grand architecture, adorned with beautiful frescoes and intricate designs, captures the essence of Rajasthan's royal charm. The lush gardens, serene pool, and spacious lawns provide a perfect retreat after exploring the vibrant attractions of the Pink City. The staff's warm hospitality, politeness, and excellent service ensure a delightful stay. The hotel has multiple restaurants offering Indian, Italian, and multi-cuisine options, with delicious food. The rooms, although not very large, maintain the cultural essence of the mahal while providing modern amenities. Located close to shopping centers and historical monuments, Jai Mahal Palace is a beautiful and convenient choice for guests visiting Jaipur.
-        </p>
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Outdoor swimming pool
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Very Good Breakfast
-           </span>
-        </div>
-
-        <div class="hotelservice">
-            <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-            <span> 
-                Air conditioning
-           </span>
-        </div>     
-    </div>
-    <!-- <mat-card class="example-card-hotels">
-        <mat-card-header>
-          <div mat-card-avatar class=""></div>
-          <mat-card-title>Uttrakhand</mat-card-title>
-          <mat-card-subtitle>Akshardham Temple</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/UK/Rishikesh10.jpeg" class="cardimg">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-      </mat-card><br> -->
-    
-      <!-- <mat-card class="example-card-hotels">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Rajasthan</mat-card-title>
-          <mat-card-subtitle>Akshardham Temple</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/rajasthan/hawamahal.jpeg">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>More Details ...</button>
-        </mat-card-actions>
-      </mat-card><br>
-
-      <mat-card class="example-card-hotels">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Delhi</mat-card-title>
-          <mat-card-subtitle>Akshardham Temple</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="../../assets/images/delhi/akshardham2.jpg">
-        <mat-card-content>
-          <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>More Details ...</button>
-        </mat-card-actions>
-      </mat-card> -->
-      
+      </mat-card-content>      
+        <!-- <div class="btnaction">        
+          <button mat-raised-button color="accent">More Details</button>
+        </div> -->
+    </mat-card> 
+  </div> 
 </div>
+
+
+</div>
+<br>
+<!-- hotelservice -->
+
 

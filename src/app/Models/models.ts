@@ -12,3 +12,11 @@ imgheight?: string;
 imgDesc?: string;
 childImage?: CommonData [];
 }
+
+export interface commonHome{
+    title?: string;
+    subtitle?: string;
+    imgUrl?: string; 
+    description?: string;   
+    }
+
