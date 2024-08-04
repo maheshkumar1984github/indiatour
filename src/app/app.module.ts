@@ -45,6 +45,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PackagesComponent } from './packages/packages.component';
 
+import { GALLERY_CONFIG, GalleryConfig } from 'ng-gallery';
+import { GalleryModule, GalleryItem, ImageItem } from 'ng-gallery';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -90,12 +94,22 @@ import { PackagesComponent } from './packages/packages.component';
     SlickCarouselModule,
     MatSelectModule,
     MatTabsModule,
-    MatTabGroup
+    MatTabGroup,
+    GalleryModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
 
   providers: [
     provideClientHydration(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    {
+      provide: GALLERY_CONFIG,
+      useValue: {
+        autoHeight: true,
+        imageSize: 'cover'
+      } as GalleryConfig
+    }
   ],
   bootstrap: [AppComponent]
 })

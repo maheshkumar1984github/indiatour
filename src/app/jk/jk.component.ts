@@ -10,8 +10,8 @@ export class JkComponent {
   data: CommonData [] = [];
   @ViewChild('slickModal', { static: true }) slickModal: any;
   slideConfig = {
-  "slidesToShow": 1, 
-  "slidesToScroll":1,
+  "slidesToShow": 2, 
+  "slidesToScroll":2,
   autoplay: true,
   autoPlaySpeed: 2000,
   dots: true,
@@ -101,11 +101,11 @@ ngOnInit(){
         imgSrc: "../../assets/images/jk/pahalgam3.jpg",         
        }
        ,
-       {  
-        imgDesc: "", 
-        imgSrc: "../../assets/images/jk/pahalgam4.webp",         
-       }
-       ,
+      //  {  
+      //   imgDesc: "", 
+      //   imgSrc: "../../assets/images/jk/pahalgam4.webp",         
+      //  }
+      //  ,
        {  
         imgDesc: "", 
         imgSrc: "../../assets/images/jk/pahalgam5.jpg",         

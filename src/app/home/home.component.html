@@ -1,5 +1,7 @@
 <div class="container">
-<div class="">
+
+  <gallery [items]="images"></gallery>
+<!-- <div class="">
     <div class="" *ngFor="let item of rjdata">
         <div>
             <div class="dataimg">
@@ -18,7 +20,7 @@
             </div>
         </div>
         </div>
-</div>
+</div> -->
 <br>
 <div>    
   <H1>Destinations in India</H1>
@@ -42,9 +44,9 @@
           {{h.description}}
         </p>
       </mat-card-content>      
-        <!-- <div class="btnaction">        
-          <button mat-raised-button color="accent">More Details</button>
-        </div> -->
+        <div class="btnaction">        
+          <a routerLink="{{h.link}}">More Details ...</a>
+        </div>
     </mat-card> 
   </div> 
 </div>

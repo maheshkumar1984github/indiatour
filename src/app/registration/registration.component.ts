@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -6,6 +7,30 @@ import { Component } from '@angular/core';
   styleUrl: './registration.component.scss'
 })
 export class RegistrationComponent {
+  registerForm: FormGroup;
+  loading = false;
+  submitted = false;
+
+  constructor(private formBuilder: FormBuilder,) {  
+}
+ngOnInit() {
+  this.registerForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      contact: ['', Validators.required],
+      email: ['', Validators.required, Validators.email],
+  });
+}
+get f() { return this.registerForm.controls; }
+
+onSubmit() {
+  this.submitted = true;
+
+  // stop here if form is invalid
+  if (this.registerForm.invalid) {
+      return;
+  }
+}
+
  public  countryList = [
   {"name": "Afghanistan", "code": "AF"},
   {"name": "Åland Islands", "code": "AX"},

@@ -10,8 +10,8 @@ export class DelhiComponent {
   rjdata: CommonData [] = [];
   @ViewChild('slickModal', { static: true }) slickModal: any;
   slideConfig = {
-  "slidesToShow": 1, 
-  "slidesToScroll":1,
+  "slidesToShow": 3, 
+  "slidesToScroll":3,
   autoplay: true,
   autoPlaySpeed: 2000,
   dots: true,

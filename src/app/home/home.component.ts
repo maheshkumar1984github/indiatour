@@ -1,13 +1,16 @@
 import { Component, ViewChild } from '@angular/core';
 import { CommonData, commonHome } from '../Models/models';
 import { SlickCarouselComponent } from "ngx-slick-carousel";
+import {PackagesComponent} from '../../app/packages/packages.component'
 
+import { GalleryModule, GalleryComponent, ImageItem, GalleryItem } from 'ng-gallery';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  images: GalleryItem[] =[];
   rjdata: CommonData [] = [];
   homedata: commonHome [] = [];
   hoteldata: commonHome [] = [];
@@ -17,7 +20,7 @@ export class HomeComponent {
   "slidesToShow": 1, 
   "slidesToScroll":1,
   arrows: true,
-  autoplay: false,
+  autoplay: true,
   autoPlaySpeed: 2000,
   dots: true,
   margin: 10,
@@ -31,6 +34,24 @@ constructor(){
 }
 
   ngOnInit(){
+
+    this.images = [
+      new ImageItem({ src: '../../assets/images/tajmahal.jpeg', thumb: '../../assets/images/tajmahal.jpeg' }),
+      new ImageItem({ src: '../../assets/images/jk/dallake1.jpeg', thumb: '../../assets/images/jk/dallake1.jpeg' }),
+
+      new ImageItem({ src: '../../assets/images/delhi/delhi-lotas.jpg', thumb: '../../assets/images/delhi/delhi-lotas.jpg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal2.jpeg', thumb: '../../assets/images/rajasthan/hawamahal2.jpeg' }),
+
+      new ImageItem({ src: '../../assets/images/rajasthan/jalmahal4.jpeg', thumb: '../../assets/images/rajasthan/jalmahal4.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/rantham3.jpeg', thumb: '../../assets/images/rajasthan/rantham3.jpeg' }),
+
+      new ImageItem({ src: '../../assets/images/UK/Massuri5.jpeg', thumb: '../../assets/images/UK/Massuri5.jpeg' }),
+      new ImageItem({ src: '../../assets/images/jk/gulmarg1.jpeg', thumb: '../../assets/images/jk/gulmarg1.jpeg' }),
+
+      // new ImageItem({ src: '../../assets/images/tajmahal.jpeg', thumb: '../../assets/images/tajmahal.jpeg' }),
+      // new ImageItem({ src: '../../assets/images/jk/dallake1.jpeg', thumb: '../../assets/images/jk/dallake1.jpeg' }),
+      // ... more items
+    ];
     this.hoteldata.push(
       {
         title: "Crowne Plaza, Rohini",       
@@ -43,36 +64,42 @@ constructor(){
         title: "Delhi",
         subtitle: "Akshardham Temple",
         imgUrl:"../../assets/images/delhi/akshardham2.jpg",
+        link: '/delhi',
         description: "Swaminarayan Akshardham in New Delhi epitomizes 10,000 years of Indian culture in all its breathtaking grandeur, beauty, wisdom an d bliss. It brilliantly showcases the essence of India’s ancient architecture, traditions and timeless spiritual messages."
       },
       {
         title: "Rajasthan",
         subtitle: "Hawa Mahal",
         imgUrl:"../../assets/images/rajasthan/hawamahal.jpeg",
+        link: '/rajasthan',
         description: "The Hawa Mahal is a palace in the city of Jaipur, Rajasthan, India. Built from red and pink sandstone, it is on the edge of the City Palace, Jaipur, and extends to the Zenana, or women's chambers."
       },
       {
         title: "Goa",
         subtitle: "Goa",
         imgUrl:"../../assets/images/Goa/goa.jpg",
+        link: '/goa',
         description:"Goa is a state on the southwestern coast of India within the Konkan region, geographically separated from the Deccan highlands by the Western Ghats."
       },
       {
         title: "Jammu & Kashmir",
         subtitle: "Dal Lake",
         imgUrl:"../../assets/images/jk/dallake2.jpeg",
+        link: '/jk',
         description: "Dal is a lake in Srinagar (Dal Lake is a misnomer as Dal in Kashmiri means lake), the summer capital of Jammu and Kashmir. The urban lake, is integral to tourism and recreation in Kashmir and is named the “Jewel in the crown of Kashmir” or “Srinagar’s Jewel”."
       },
       {
         title: "Uttrakhand",
         subtitle: "Rishikesh",
         imgUrl:"../../assets/images/UK/Rishikesh1.jpeg",
+        link: '/uttrakhand',
         description:"Rishikesh is also known for its connection with The Beatles. In February 1968, members of the legendary English rock band visited Maharishi Mahesh Yogi's ashram (now popularly known as the Beatles Ashram) to learn transcendental meditatio"
       },
       {
         title: "Himachal",
         subtitle: "Manali",
         imgUrl:"../../assets/images/Himachal/Manali3.jpg",
+        link: '/himachal',
         description:"Situated near the end of valley, Manali is one of the most attractive tourist spot not only of Himachal Pradesh, but of International fame also. Manali is synonymous streams and birdsong, forests and orchards and grandees of snow-capped mountains."
       }
     )

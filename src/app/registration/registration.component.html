@@ -1,60 +1,56 @@
-<h2 mat-dialog-title>Enquery</h2>
-<div  mat-dialog-content>
-  <div class="container">
-    <div class="jumbotron">
-      <div class="row">
-        <table>
-          <tr>
-            <td style="padding-right: 50px;">
-              <div>
-                <div class="divenqimg">
-                  <img src="../../assets/images/delhi/akshardham1.jpg" class="enqimg"/>
-                </div>
-              </div>
-            </td>
-            <td >
-              <div>
-                <form>
-                  <mat-form-field appearance="fill">
-                      <mat-label>Name</mat-label>
-                      <input matInput #name maxlength="256" placeholder="Name">
-                    </mat-form-field> <br>
-                    <mat-form-field appearance="fill">
-                      <mat-label>Country</mat-label>
-                      <mat-select >        
-                        <mat-option *ngFor="let c of countryList" value="{{c.name}}">{{c.name}}</mat-option>
-                      </mat-select>
-                    </mat-form-field><br>
-                    <mat-form-field appearance="fill">
-                      <mat-label>No. of Person</mat-label>
-                      <input matInput #noofperson maxlength="199" placeholder="No. of Person">
-                    </mat-form-field> <br>         
-                    <mat-form-field appearance="fill">
-                      <mat-label>Contact</mat-label>
-                      <input matInput #contact  placeholder="Contact">
-                    </mat-form-field> <br>
-                    <mat-form-field appearance="fill">
-                      <mat-label>Email</mat-label>
-                      <input matInput #email maxlength="200" placeholder="Email">
-                    </mat-form-field> <br>
-                    <button mat-raised-button color="accent">Submit</button> &nbsp; &nbsp; &nbsp;
-                    <button mat-raised-button mat-dialog-close>Close</button>
-              </form>
-              </div>
-            </td>
-           
-          </tr>
-        </table>
-        
-        
-      </div> 
- 
-   
+
+<div class="">
+  <h2 mat-dialog-title>Request Callback</h2>
+  <div  mat-dialog-content>
+    <div class="">
+      <div class="">
+        <div class="row">
+          <div  style="width: 45%;">
+            <div class="">
+              <img src="../../assets/images/tajmahal.jpeg" class="enqimg"/>
+            </div>
+          </div>
+          <div style="width: 45%;float: right;">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+              <mat-form-field appearance="fill">
+                  <mat-label>Name</mat-label>
+                  <input matInput #firstName  placeholder="Name" formControlName="firstName">
+                </mat-form-field> <br>
+                <mat-form-field appearance="fill">
+                  <mat-label>Country</mat-label>
+                  <mat-select >        
+                    <mat-option *ngFor="let c of countryList" value="{{c.name}}">{{c.name}}</mat-option>
+                  </mat-select>
+                </mat-form-field><br>
+                <!-- <mat-form-field appearance="fill">
+                  <mat-label>No. of Person</mat-label>
+                  <input matInput #noofperson maxlength="199" placeholder="No. of Person">
+                </mat-form-field> <br>          -->
+                <mat-form-field appearance="fill">
+                  <mat-label>Contact</mat-label>
+                  <input matInput #contact  placeholder="Contact" formControlName="contact">
+                </mat-form-field> <br>
+                <mat-form-field appearance="fill">
+                  <mat-label>Email</mat-label>
+                  <input matInput #email placeholder="Email" formControlName="email" type="email">
+                </mat-form-field> 
+                <!-- <div *ngIf="(email.invalid && email.touched) || email.dirty">
+                  <small *ngIf="email.errors?.required" class="text-danger">Email is required</small>
+                  <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
+                </div> -->
+                <br>
+                <button mat-raised-button color="accent">Submit</button> &nbsp; &nbsp; &nbsp;
+                <button mat-raised-button mat-dialog-close>Close</button>
+          </form>
+          </div>
+                 
+        </div> 
+    </div>
   </div>
+  
+  </div>
+  
 </div>
-
-</div>
-
 
 
 

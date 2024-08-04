@@ -88,9 +88,16 @@ body { margin: 0;
     font-size: 16px;
   }
 
-  h1,h2,h3,h4,h5,h6{
+  h1{
     color: #3f51b5;
     padding: 0;
+    font-weight: bold;
+  
+  }
+ h2,h3,h4,h5,h6{
+    color: #3f51b5;
+    padding: 0;
+    font-weight: bold;
   }
   .contact{
     float: right; color: white; display: flex;
@@ -232,6 +239,7 @@ slick-prev:before, .slick-next:before {
 .container{
   width: 100%;
   align-items: center;
+  padding: 10px;
 }
 
 .areahotels{

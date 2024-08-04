@@ -2,12 +2,16 @@ import { Component, Input, ViewChild } from '@angular/core';
 import {ReadmoreComponent} from '../readmore/readmore.component';
 import {CommonData} from '../Models/models'
 import { SlickCarouselComponent } from 'ngx-slick-carousel/slick.component';
+
+import { GalleryModule, GalleryComponent, ImageItem, GalleryItem } from 'ng-gallery';
 @Component({
   selector: 'app-rajasthan',
   templateUrl: './rajasthan.component.html',
   styleUrl: './rajasthan.component.scss',
 })
 export class RajasthanComponent {
+   images: GalleryItem[] =[];
+   
   rjdata: CommonData [] = [];
   @ViewChild('slickModal', { static: true }) slickModal: any;
   slideConfig = {
@@ -18,12 +22,36 @@ export class RajasthanComponent {
   dots: true,
   margin: 10,
 };
+
+
   ngOnInit() {
+   this.images = [
+      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal.jpeg', thumb: '../../assets/images/rajasthan/hawamahal.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal2.jpeg', thumb: '../../assets/images/rajasthan/hawamahal2.jpeg' }),
+
+      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal3.jpeg', thumb: '../../assets/images/rajasthan/hawamahal3.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal4.jpeg', thumb: '../../assets/images/rajasthan/hawamahal4.jpeg' }),
+
+      new ImageItem({ src: '../../assets/images/rajasthan/jalmahal2.jpeg', thumb: '../../assets/images/rajasthan/jalmahal2.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/jalmahal3.jpeg', thumb: '../../assets/images/rajasthan/jalmahal3.jpeg' }),
+
+      new ImageItem({ src: '../../assets/images/rajasthan/jalmahal4.jpeg', thumb: '../../assets/images/rajasthan/jalmahal4.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/pushkar1.jpeg', thumb: '../../assets/images/rajasthan/pushkar1.jpeg' }),
+
+      new ImageItem({ src: '../../assets/images/rajasthan/udaypur1.jpeg', thumb: '../../assets/images/rajasthan/udaypur1.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/udaypur3.jpeg', thumb: '../../assets/images/rajasthan/udaypur3.jpeg' }),
+
+      new ImageItem({ src: '../../assets/images/rajasthan/rantham1.jpeg', thumb: '../../assets/images/rajasthan/rantham1.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/rantham2.jpeg', thumb: '../../assets/images/rajasthan/rantham2.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/rantham3.jpeg', thumb: '../../assets/images/rajasthan/rantham3.jpeg' }),
+      new ImageItem({ src: '../../assets/images/rajasthan/rantham7.jpeg', thumb: '../../assets/images/rajasthan/rantham7.jpeg' }),
+      // ... more items
+    ];
 
     this.rjdata.push(
       { 
         state : 'Rajasthan',
-        locationName: "Jaipur >> HawaMahal" ,
+        locationName: "HawaMahal" ,
         locationDescription : "The Hawa Mahal is a palace in the city of Jaipur, Rajasthan, India. Built from red and pink sandstone, it is on the edge of the City Palace, Jaipur, and extends to the Zenana, or women's chambers."+
         "The structure was built in 1799 by the Maharaja Sawai Pratap Singh, grandson of Maharaja Sawai Jai Singh, the founder of the city of Jhunjhunu in the state of Rajasthan.He was so inspired by the unique structure of Khetri Mahal that he built this grand and historical palace.",
          childImage: [
@@ -52,7 +80,7 @@ export class RajasthanComponent {
       },
       { 
         state : 'Rajasthan',
-        locationName: "Jaipur >> JalMahal" ,
+        locationName: "JalMahal" ,
         locationDescription : "The Jal Mahal Palace is an architectural showcase of the Rajput style of architecture (common in Rajasthan) on a grand scale. The building has a picturesque view of Man Sagar Lake, but owing to its seclusion from land is equally the focus of a viewpoint from the Man Sagar Dam on the eastern side of the lake in front of the backdrop of the surrounding Nahargarh (tiger-abode) hills. The palace, built with local sandstone, is a three-storied building, with the third floor only existing on the eastern side of the palace. The eastern side is not visible from the road side public promenade, which is the Western side of the palace. The additional lower levels of the eastern side remain underwater when the lake is full. The Jal Mahal has a terrace floor with a garden, and the garden has four Tibaris facing north, south, east and west. The Tibaris are designed in the Bengal roof style architecture while the four octagonal Chhatri on the roof mark the corners of the monument. The palace had suffered subsidence in the past and also partial seepage (plaster work and wall damage equivalent to rising damp) because of water logging, which have been repaired under a restoration project of the Government of Rajasthan.",
         category :"",
         locationLat:"", 

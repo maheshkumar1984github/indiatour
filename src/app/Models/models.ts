@@ -17,6 +17,7 @@ export interface commonHome{
     title?: string;
     subtitle?: string;
     imgUrl?: string; 
-    description?: string;   
+    description?: string;
+    link?: string;  
     }
 

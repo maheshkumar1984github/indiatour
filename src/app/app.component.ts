@@ -13,7 +13,7 @@ export class AppComponent {
   BookNow(){
     let dialogRef = this.dialog.open(RegistrationComponent, {
       height: '550px',
-      width: '860px',
+      width: '900px',
     });
   }
 }
