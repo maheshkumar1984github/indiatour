@@ -1,6 +1,6 @@
-.container {
+.imgmap {
   position: relative;
-  width: 50%;
+  width: 100%;
 }
 
 .image {
@@ -9,7 +9,7 @@
   height: auto;
 }
 
-.overlay {
+.imgmap {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -22,7 +22,7 @@
   background-color: #008CBA;
 }
 
-.container:hover .overlay {
+.imgmap:hover .overlay {
   opacity: 1;
 }
 
@@ -38,3 +38,44 @@
   text-align: center;
 }
 
+mat-grid-tile {
+  background: whitesmoke;
+  float: left;
+  vertical-align:top ;
+}
+
+.example-box.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.example-chip .cdk-drop-list-dragging {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.pkgbtn{
+  position: absolute;
+  bottom: 2;
+  left: 4;
+  padding: 20px;
+  margin: 10px;
+}
+
+.pckdiv{
+  margin: 5px;
+  box-shadow: 0 2px 2px 0;
+  border-color: #008CBA;
+}
+
+.col-5{
+  width: 48%;
+  float: left;
+  display: flex 0 0 auto;
+  padding: 2px;
+  margin: 10px;
+}
+
+.pkgimg{
+width: 300px;
+height: 250px;
+float: left;
+}

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-registration',
@@ -10,21 +11,36 @@ export class RegistrationComponent {
   registerForm: FormGroup;
   loading = false;
   submitted = false;
+  selected = ''
 
   constructor(private formBuilder: FormBuilder,) {  
 }
 ngOnInit() {
+  emailjs.init('XfQuclXGziFGOssM1');
   this.registerForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      contact: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      from_Name: ['', Validators.required],
+      from_contact: ['', Validators.required],
+      from_countary: [''],
+      from_email: ['', Validators.required],
+      Noofperson:['']
   });
 }
 get f() { return this.registerForm.controls; }
 
-onSubmit() {
-  this.submitted = true;
+async onSubmit() {
+  // this.submitted = true;
+    if (this.registerForm.valid) {
+      let responce = await emailjs.send("service_75btl4q","template_j22t19o",{
+      from_name:this.registerForm.value.from_Name,
+      contact: this.registerForm.value.from_contact,
+      email: this.registerForm.value.from_email,
+      countary: this.selected,
+      Noofperson: this.registerForm.value.Noofperson
+      });
 
+      alert('Details submitted successfully. Thank you');
+      this.registerForm.reset();
+  }
   // stop here if form is invalid
   if (this.registerForm.invalid) {
       return;

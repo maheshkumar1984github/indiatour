@@ -10,8 +10,8 @@ export class JkComponent {
   data: CommonData [] = [];
   @ViewChild('slickModal', { static: true }) slickModal: any;
   slideConfig = {
-  "slidesToShow": 2, 
-  "slidesToScroll":2,
+  "slidesToShow": 1, 
+  "slidesToScroll":1,
   autoplay: true,
   autoPlaySpeed: 2000,
   dots: true,

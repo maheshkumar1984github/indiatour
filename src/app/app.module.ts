@@ -48,6 +48,9 @@ import { PackagesComponent } from './packages/packages.component';
 import { GALLERY_CONFIG, GalleryConfig } from 'ng-gallery';
 import { GalleryModule, GalleryItem, ImageItem } from 'ng-gallery';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GoaComponent } from './goa/goa.component';
+
+
 
 @NgModule({
   declarations: [
@@ -63,7 +66,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegistrationComponent,
     FooterComponent,
     HomeComponent,
-    PackagesComponent
+    PackagesComponent,
+    GoaComponent
   ],
   imports: [
     BrowserModule,

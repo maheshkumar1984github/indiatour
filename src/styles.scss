@@ -2,14 +2,8 @@
 
 html, body { height: 100%; }
 body { margin: 0;
-   font-family: Roboto, 
+   font-family: sans-serif, 
    "Helvetica Neue", sans-serif;
-  //  margin-left: 50px;
-  //  margin-right: 50px;
-  //  margin-top: 10px;
-  //width: 90%;
-  // margin-left: 20px;
-  // margin-right: 20px;
   background-color: whitesmoke;
   align-items: center;
 }
@@ -25,41 +19,54 @@ body { margin: 0;
     width: 100%;
     max-width: 100%;
 }
-.col-md-3{
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
-    width: 33%;
-   
+  }
+.col-md-12 {
+  width: 100%;
 }
-.col-md-1{
-  float: left;
-  width: 10%;
- 
+.col-md-11 {
+  width: 91.66666667%;
 }
-.col-md-11{
-  float: left;
-  width: 90%;
- 
+.col-md-10 {
+  width: 83.33333333%;
 }
-.col-md-2{
-  float: left;
-  width: 20%;
- 
+.col-md-9 {
+  width: 75%;
 }
-.col-md-10{
-  float: left;
-  width: 80%;
- 
+.col-md-8 {
+  width: 66.66666667%;
 }
-.col-md-9{
-  float: left;
-  width: 70%;
- 
+.col-md-7 {
+  width: 58.33333333%;
 }
-.col-md-8{
-  float: left;
-  width: 60%;
- 
+.col-md-6 {
+  width: 48%;
 }
+.col-md-5 {
+  width: 41.66666667%;
+}
+.col-md-4 {
+  width: 33.33333333%;
+}
+.col-md-3 {
+  width: 25%;
+}
+.col-md-2 {
+  width: 16.66666667%;
+}
+.col-md-1 {
+  width: 8.33333333%;
+}
+}
+
+
+  .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+  }
+
 .content{   
     margin: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -75,8 +82,9 @@ body { margin: 0;
     font-size: 18px;
     font-style: normal;
     //font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     text-align: justify;
+    line-height: 1.5;
   }
 
   .dataimg{
@@ -239,9 +247,18 @@ slick-prev:before, .slick-next:before {
 .container{
   width: 100%;
   align-items: center;
-  padding: 10px;
+  margin: 10px;
 }
 
 .areahotels{
   width: 100%;
+}
+
+li {display: block;
+  padding: 2px;
+  font-family: sans-serif;
+  font-size: 11px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  width: 150px;
 }

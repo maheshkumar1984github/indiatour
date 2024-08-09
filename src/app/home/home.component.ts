@@ -77,7 +77,7 @@ constructor(){
       {
         title: "Goa",
         subtitle: "Goa",
-        imgUrl:"../../assets/images/Goa/goa.jpg",
+        imgUrl:"../../assets/images/goa/goa.jpg",
         link: '/goa',
         description:"Goa is a state on the southwestern coast of India within the Konkan region, geographically separated from the Deccan highlands by the Western Ghats."
       },
@@ -92,7 +92,7 @@ constructor(){
         title: "Uttrakhand",
         subtitle: "Rishikesh",
         imgUrl:"../../assets/images/UK/Rishikesh1.jpeg",
-        link: '/uttrakhand',
+        link: '/uttarakhand',
         description:"Rishikesh is also known for its connection with The Beatles. In February 1968, members of the legendary English rock band visited Maharishi Mahesh Yogi's ashram (now popularly known as the Beatles Ashram) to learn transcendental meditatio"
       },
       {

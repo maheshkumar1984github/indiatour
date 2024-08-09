@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'india-tour-with-ravi-ang';
 
   constructor(public dialog: MatDialog){}
-  BookNow(){
+  MoreDetails(){
     let dialogRef = this.dialog.open(RegistrationComponent, {
       height: '550px',
       width: '900px',

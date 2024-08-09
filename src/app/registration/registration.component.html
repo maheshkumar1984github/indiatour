@@ -11,35 +11,35 @@
             </div>
           </div>
           <div style="width: 45%;float: right;">
-            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="registerForm" (submit)="onSubmit()">
               <mat-form-field appearance="fill">
                   <mat-label>Name</mat-label>
-                  <input matInput #firstName  placeholder="Name" formControlName="firstName">
+                  <input matInput #firstName  placeholder="Name" formControlName="from_Name">
                 </mat-form-field> <br>
                 <mat-form-field appearance="fill">
                   <mat-label>Country</mat-label>
-                  <mat-select >        
+                  <mat-select formControlName="from_contact" [(value)]="selected">        
                     <mat-option *ngFor="let c of countryList" value="{{c.name}}">{{c.name}}</mat-option>
                   </mat-select>
                 </mat-form-field><br>
-                <!-- <mat-form-field appearance="fill">
+                <mat-form-field appearance="fill">
                   <mat-label>No. of Person</mat-label>
-                  <input matInput #noofperson maxlength="199" placeholder="No. of Person">
-                </mat-form-field> <br>          -->
+                  <input matInput formControlName="Noofperson"  placeholder="No. of Person">
+                </mat-form-field> <br>         
                 <mat-form-field appearance="fill">
                   <mat-label>Contact</mat-label>
-                  <input matInput #contact  placeholder="Contact" formControlName="contact">
+                  <input matInput #contact  placeholder="Contact" formControlName="from_contact">
                 </mat-form-field> <br>
                 <mat-form-field appearance="fill">
                   <mat-label>Email</mat-label>
-                  <input matInput #email placeholder="Email" formControlName="email" type="email">
+                  <input matInput #email placeholder="Email" formControlName="from_email" type="email">
                 </mat-form-field> 
                 <!-- <div *ngIf="(email.invalid && email.touched) || email.dirty">
                   <small *ngIf="email.errors?.required" class="text-danger">Email is required</small>
                   <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
                 </div> -->
                 <br>
-                <button mat-raised-button color="accent">Submit</button> &nbsp; &nbsp; &nbsp;
+                <button mat-raised-button color="accent" type="submit">Submit</button> &nbsp; &nbsp; &nbsp;
                 <button mat-raised-button mat-dialog-close>Close</button>
           </form>
           </div>

@@ -21,32 +21,34 @@ export class RajasthanComponent {
   autoPlaySpeed: 2000,
   dots: true,
   margin: 10,
+   nextArrow: '<i class="fa fa-arrow-right nextArrowBtn"></i>',
+  prevArrow: '<i class="fa fa-arrow-left prevArrowBtn"></i>'
 };
 
 
   ngOnInit() {
-   this.images = [
-      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal.jpeg', thumb: '../../assets/images/rajasthan/hawamahal.jpeg' }),
-      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal2.jpeg', thumb: '../../assets/images/rajasthan/hawamahal2.jpeg' }),
+   // this.images = [
+   //    new ImageItem({ src: '../../assets/images/rajasthan/hawamahal.jpeg', thumb: '../../assets/images/rajasthan/hawamahal.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/hawamahal2.jpeg', thumb: '../../assets/images/rajasthan/hawamahal2.jpeg' }),
 
-      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal3.jpeg', thumb: '../../assets/images/rajasthan/hawamahal3.jpeg' }),
-      new ImageItem({ src: '../../assets/images/rajasthan/hawamahal4.jpeg', thumb: '../../assets/images/rajasthan/hawamahal4.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/hawamahal3.jpeg', thumb: '../../assets/images/rajasthan/hawamahal3.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/hawamahal4.jpeg', thumb: '../../assets/images/rajasthan/hawamahal4.jpeg' }),
 
-      new ImageItem({ src: '../../assets/images/rajasthan/jalmahal2.jpeg', thumb: '../../assets/images/rajasthan/jalmahal2.jpeg' }),
-      new ImageItem({ src: '../../assets/images/rajasthan/jalmahal3.jpeg', thumb: '../../assets/images/rajasthan/jalmahal3.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/jalmahal2.jpeg', thumb: '../../assets/images/rajasthan/jalmahal2.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/jalmahal3.jpeg', thumb: '../../assets/images/rajasthan/jalmahal3.jpeg' }),
 
-      new ImageItem({ src: '../../assets/images/rajasthan/jalmahal4.jpeg', thumb: '../../assets/images/rajasthan/jalmahal4.jpeg' }),
-      new ImageItem({ src: '../../assets/images/rajasthan/pushkar1.jpeg', thumb: '../../assets/images/rajasthan/pushkar1.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/jalmahal4.jpeg', thumb: '../../assets/images/rajasthan/jalmahal4.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/pushkar1.jpeg', thumb: '../../assets/images/rajasthan/pushkar1.jpeg' }),
 
-      new ImageItem({ src: '../../assets/images/rajasthan/udaypur1.jpeg', thumb: '../../assets/images/rajasthan/udaypur1.jpeg' }),
-      new ImageItem({ src: '../../assets/images/rajasthan/udaypur3.jpeg', thumb: '../../assets/images/rajasthan/udaypur3.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/udaypur1.jpeg', thumb: '../../assets/images/rajasthan/udaypur1.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/udaypur3.jpeg', thumb: '../../assets/images/rajasthan/udaypur3.jpeg' }),
 
-      new ImageItem({ src: '../../assets/images/rajasthan/rantham1.jpeg', thumb: '../../assets/images/rajasthan/rantham1.jpeg' }),
-      new ImageItem({ src: '../../assets/images/rajasthan/rantham2.jpeg', thumb: '../../assets/images/rajasthan/rantham2.jpeg' }),
-      new ImageItem({ src: '../../assets/images/rajasthan/rantham3.jpeg', thumb: '../../assets/images/rajasthan/rantham3.jpeg' }),
-      new ImageItem({ src: '../../assets/images/rajasthan/rantham7.jpeg', thumb: '../../assets/images/rajasthan/rantham7.jpeg' }),
-      // ... more items
-    ];
+   //    new ImageItem({ src: '../../assets/images/rajasthan/rantham1.jpeg', thumb: '../../assets/images/rajasthan/rantham1.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/rantham2.jpeg', thumb: '../../assets/images/rajasthan/rantham2.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/rantham3.jpeg', thumb: '../../assets/images/rajasthan/rantham3.jpeg' }),
+   //    new ImageItem({ src: '../../assets/images/rajasthan/rantham7.jpeg', thumb: '../../assets/images/rajasthan/rantham7.jpeg' }),
+   //    // ... more items
+   //  ];
 
     this.rjdata.push(
       { 
@@ -91,10 +93,6 @@ export class RajasthanComponent {
              imgDesc: "", 
              imgSrc: "../../assets/images/rajasthan/jalmahal2.jpeg",
               
-          },
-          {           
-             imgDesc: "", 
-             imgSrc: "../../assets/images/rajasthan/jalmahal2.jpeg",            
           },
           {            
              imgDesc: "", 
