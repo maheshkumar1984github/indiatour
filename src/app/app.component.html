@@ -1,8 +1,18 @@
-<app-menu></app-menu>       
-<router-outlet></router-outlet>  
-<app-footer></app-footer>
-<div class="rgstr">
-    <button type='button' mat-button class="btn" (click)="MoreDetails()">More Details</button>
-  </div>
+<div class=""
+fxLayout ="row wrap"
+fxLayoutAlign="center">
+
+<div class="item item-1" fxFlex="100%" fxFlex.sm="100%" fxFlex.sm="100%" fxLayoutAli>
+   <app-menu></app-menu> 
+   <router-outlet></router-outlet> 
+   <app-footer></app-footer>
+</div>
+  
+  
+  <div class="rgstr">
+      <button type='button' mat-button class="btn" (click)="MoreDetails()">More Details</button>
+    </div>
+</div>
+
 
 

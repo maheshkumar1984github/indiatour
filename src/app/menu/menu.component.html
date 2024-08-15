@@ -1,25 +1,56 @@
-<!-- <p>
-  <mat-toolbar color="primary">    
-    <span>My App</span>   
-    <button mat-button [matMenuTriggerFor]="belowMenu" class="">Below</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-      <button mat-menu-item>Item 1</button>
-      <button mat-menu-item>Item 2</button>
-    </mat-menu>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
-</p> -->
 
-<div class="navbar">
-  <a routerLink="#" style="font-size: 22px; color:orange; font-family: 'Times New Roman', Times, serif;">IndiaTourWithRavi</a> 
+  <mat-toolbar color="primary">    
+    <span style="font-size: 22px; color:orange; font-family: 'Times New Roman', Times, serif;">RaviguideInd</span>  
+    <div class="div"  fxHide fxShow.xs>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button> 
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/rajasthan">Rajasthan</button>
+        <button mat-menu-item routerLink="/himachal">Himachal Pradesh</button>
+        <button mat-menu-item routerLink="/uttarakhand">Uttarakhand</button>
+        <button mat-menu-item routerLink="/delhi">Delhi</button>
+        <button mat-menu-item routerLink="/goa">Goa</button>
+        <button mat-menu-item routerLink="/jk">Jammu & Kashmir</button>
+        <!-- <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button> -->
+      </mat-menu>
+    </div>
+    <div class="div" fxShow fxHide.xs>
+      <button mat-button routerLink="/home" class=""> <mat-icon>home</mat-icon>Home</button>
+      <button mat-button [matMenuTriggerFor]="belowMenu" class=""><mat-icon>place</mat-icon>Destinations</button>
+      <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button mat-menu-item routerLink="/rajasthan">Rajasthan</button>
+        <button mat-menu-item routerLink="/himachal">Himachal Pradesh</button>
+        <button mat-menu-item routerLink="/uttarakhand">Uttarakhand</button>
+        <button mat-menu-item routerLink="/delhi">Delhi</button>
+        <button mat-menu-item routerLink="/goa">Goa</button>
+        <button mat-menu-item routerLink="/jk">Jammu & Kashmir</button>
+      </mat-menu>
+      <button mat-button routerLink="/packages" class=""><mat-icon>book</mat-icon>Packages</button>
+    </div>    
+    <span class="example-spacer"></span>
+    <div class="contact">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
+      <p>+91 8130860059</p>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="email"></mat-icon>
+      <p>singhravi74936&#64;gmail.com</p>
+    </div>
+  </mat-toolbar>
+
+
+<!-- <div class="navbar">
+  <a routerLink="#" style="font-size: 22px; color:orange; font-family: 'Times New Roman', Times, serif;">RaviguideInd</a> 
   <a routerLink="/home">Home</a> 
   <div class="dropdown">
     <button class="dropbtn">Destination <i class="fa fa-caret-down"></i>
@@ -38,7 +69,7 @@
     </div>
   </div> 
 
-  <a routerLink="/packages" class="menulink">Packages</a> 
+  <a routerLink="/packages" class="menulink">Packages</a>  -->
   <!-- <a routerLink="/hotels" class="menulink">Hotels</a> -->
   <!-- <a routerLink="/home" class="menulink">About Us</a>   -->
 
@@ -103,13 +134,13 @@
       </div>
     </div>
   </div> -->
-  <div class="contact">
+  <!-- <div class="contact">
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
     <p>+91 8130860059</p>
     <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="email"></mat-icon>
     <p>singhravi74936&#64;gmail.com</p>
   </div>
   
-</div>
+</div> -->
 
  

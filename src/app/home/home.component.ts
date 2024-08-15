@@ -36,7 +36,7 @@ constructor(){
   ngOnInit(){
 
     this.images = [
-      new ImageItem({ src: '../../assets/images/tajmahal.jpeg', thumb: '../../assets/images/tajmahal.jpeg' }),
+      new ImageItem({ src: '../../assets/images/tajmahal.jpeg', thumb: '../../assets/images/tajmahal.jpeg'}),
       new ImageItem({ src: '../../assets/images/jk/dallake1.jpeg', thumb: '../../assets/images/jk/dallake1.jpeg' }),
 
       new ImageItem({ src: '../../assets/images/delhi/delhi-lotas.jpg', thumb: '../../assets/images/delhi/delhi-lotas.jpg' }),
