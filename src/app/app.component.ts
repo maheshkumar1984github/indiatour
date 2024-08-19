@@ -17,8 +17,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
   MoreDetails(){
     let dialogRef = this.dialog.open(RegistrationComponent, {
-      height: '550px',
-      width: '900px',
+      height: '780px',
+      width: '1150px',
     });
   }
   ngOnInit(): void {

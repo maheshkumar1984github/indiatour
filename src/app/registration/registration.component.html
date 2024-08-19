@@ -1,56 +1,64 @@
-
-<div class="">
-  <h2 mat-dialog-title>Request Callback</h2>
-  <div  mat-dialog-content>
-    <div class="">
-      <div class="">
-        <div class="row">
-          <div  style="width: 45%;">
-            <div class="">
-              <img src="../../assets/images/tajmahal.jpeg" class="enqimg"/>
-            </div>
-          </div>
-          <div style="width: 45%;float: right;">
-            <form [formGroup]="registerForm" (submit)="onSubmit()">
-              <mat-form-field appearance="fill">
-                  <mat-label>Name</mat-label>
-                  <input matInput #firstName  placeholder="Name" formControlName="from_Name">
-                </mat-form-field> <br>
-                <mat-form-field appearance="fill">
-                  <mat-label>Country</mat-label>
-                  <mat-select formControlName="from_contact" [(value)]="selected">        
-                    <mat-option *ngFor="let c of countryList" value="{{c.name}}">{{c.name}}</mat-option>
-                  </mat-select>
-                </mat-form-field><br>
-                <mat-form-field appearance="fill">
-                  <mat-label>No. of Person</mat-label>
-                  <input matInput formControlName="Noofperson"  placeholder="No. of Person">
-                </mat-form-field> <br>         
-                <mat-form-field appearance="fill">
-                  <mat-label>Contact</mat-label>
-                  <input matInput #contact  placeholder="Contact" formControlName="from_contact">
-                </mat-form-field> <br>
-                <mat-form-field appearance="fill">
-                  <mat-label>Email</mat-label>
-                  <input matInput #email placeholder="Email" formControlName="from_email" type="email">
-                </mat-form-field> 
-                <!-- <div *ngIf="(email.invalid && email.touched) || email.dirty">
-                  <small *ngIf="email.errors?.required" class="text-danger">Email is required</small>
-                  <small *ngIf="email.errors?.pattern" class="text-danger">Please provide a valid email address</small>
-                </div> -->
-                <br>
-                <button mat-raised-button color="accent" type="submit">Submit</button> &nbsp; &nbsp; &nbsp;
-                <button mat-raised-button mat-dialog-close>Close</button>
-          </form>
-          </div>
-                 
-        </div> 
+<mat-dialog-content>
+  <h1>Get Details</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../../assets/images/tajmahal.jpeg" width="100%" height="100%" style="float: left;">
+      </div>
+      <div class="col-md-6">
+        
+        <form [formGroup]="registerForm" (submit)="onSubmit()" class="example-form">
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput #firstName  placeholder="Name" formControlName="from_Name">
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Country</mat-label>
+            <mat-select formControlName="from_contact" [(value)]="selected">        
+              <mat-option *ngFor="let c of countryList" value="{{c.name}}">{{c.name}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>No. of Person</mat-label>
+            <input matInput formControlName="Noofperson"  placeholder="No. of Person">
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Contact</mat-label>
+            <input matInput #contact  placeholder="Contact" formControlName="from_contact">
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input matInput #email placeholder="Email" formControlName="from_email" type="email">
+          </mat-form-field> 
+        </div>    
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Other Details</mat-label>
+            <textarea matInput  placeholder="Other Details" formControlName="from_Otherdetails"></textarea>          
+          </mat-form-field> 
+        </div>          
+      </form>
+      </div>
     </div>
   </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="accent" type="button" (click)="onSubmit()">Submit</button> &nbsp; &nbsp; &nbsp;
+  <button mat-raised-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
+
+
+
   
-  </div>
-  
-</div>
 
 
 

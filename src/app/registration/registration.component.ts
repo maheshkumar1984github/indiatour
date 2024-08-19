@@ -22,7 +22,8 @@ ngOnInit() {
       from_contact: ['', Validators.required],
       from_countary: [''],
       from_email: ['', Validators.required],
-      Noofperson:['']
+      Noofperson:[''],
+      from_Otherdetails:['']
   });
 }
 get f() { return this.registerForm.controls; }
@@ -35,7 +36,8 @@ async onSubmit() {
       contact: this.registerForm.value.from_contact,
       email: this.registerForm.value.from_email,
       countary: this.selected,
-      Noofperson: this.registerForm.value.Noofperson
+      Noofperson: this.registerForm.value.Noofperson,
+      from_Otherdetails: this.registerForm.value.from_Otherdetails,
       });
 
       alert('Details submitted successfully. Thank you');

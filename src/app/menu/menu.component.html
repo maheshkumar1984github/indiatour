@@ -1,146 +1,45 @@
 
-  <mat-toolbar color="primary">    
-    <span style="font-size: 22px; color:orange; font-family: 'Times New Roman', Times, serif;">RaviguideInd</span>  
-    <div class="div"  fxHide fxShow.xs>
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-        <mat-icon>more_vert</mat-icon>
-      </button> 
-      <mat-menu #menu="matMenu">
-        <button mat-menu-item routerLink="/rajasthan">Rajasthan</button>
-        <button mat-menu-item routerLink="/himachal">Himachal Pradesh</button>
-        <button mat-menu-item routerLink="/uttarakhand">Uttarakhand</button>
-        <button mat-menu-item routerLink="/delhi">Delhi</button>
-        <button mat-menu-item routerLink="/goa">Goa</button>
-        <button mat-menu-item routerLink="/jk">Jammu & Kashmir</button>
-        <!-- <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
-        <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voice mail</span>
-        </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
-        </button> -->
-      </mat-menu>
+  <div class="">
+    <div class="container-fluid">
+      <mat-toolbar color="primary"> 
+        <button mat-icon-button class="example-icon" [matMenuTriggerFor]="belowMenu" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+          <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item routerLink="/rajasthan">Rajasthan</button>
+            <button mat-menu-item routerLink="/himachal">Himachal Pradesh</button>
+            <button mat-menu-item routerLink="/uttarakhand">Uttarakhand</button>
+            <button mat-menu-item routerLink="/delhi">Delhi</button>
+            <button mat-menu-item routerLink="/goa">Goa</button>
+            <button mat-menu-item routerLink="/jk">Jammu & Kashmir</button>
+            <hr>
+            <button mat-button routerLink="/packages" class=""><mat-icon>book</mat-icon>Packages</button>  
+            <hr>
+            <button mat-button routerLink="/packages" class=""><mat-icon>call</mat-icon>+91 8130860059</button>
+            <button mat-button routerLink="/packages" class=""><mat-icon>email</mat-icon>singhravi74936&#64;gmail.com</button>
+          </mat-menu>
+        </button>   
+        <span style="color: orangered;">RaviguideInd</span>  
+          <button mat-button routerLink="/home" class=""> <mat-icon>home</mat-icon>Home</button>
+          <button mat-button [matMenuTriggerFor]="belowMenu" class=""><mat-icon>place</mat-icon>Destinations</button>
+          <mat-menu #belowMenu="matMenu" yPosition="below">
+            <button mat-menu-item routerLink="/rajasthan">Rajasthan</button>
+            <button mat-menu-item routerLink="/himachal">Himachal Pradesh</button>
+            <button mat-menu-item routerLink="/uttarakhand">Uttarakhand</button>
+            <button mat-menu-item routerLink="/delhi">Delhi</button>
+            <button mat-menu-item routerLink="/goa">Goa</button>
+            <button mat-menu-item routerLink="/jk">Jammu & Kashmir</button>
+          </mat-menu>
+          <button mat-button routerLink="/packages" class=""><mat-icon>book</mat-icon>Packages</button>   
+        <span class="example-spacer"></span> 
+           <button mat-button routerLink="/packages" class=""><mat-icon>call</mat-icon>+91 8130860059</button>
+            <button mat-button routerLink="/packages" class=""><mat-icon>email</mat-icon>singhravi74936&#64;gmail.com</button> 
+      </mat-toolbar>
     </div>
-    <div class="div" fxShow fxHide.xs>
-      <button mat-button routerLink="/home" class=""> <mat-icon>home</mat-icon>Home</button>
-      <button mat-button [matMenuTriggerFor]="belowMenu" class=""><mat-icon>place</mat-icon>Destinations</button>
-      <mat-menu #belowMenu="matMenu" yPosition="below">
-        <button mat-menu-item routerLink="/rajasthan">Rajasthan</button>
-        <button mat-menu-item routerLink="/himachal">Himachal Pradesh</button>
-        <button mat-menu-item routerLink="/uttarakhand">Uttarakhand</button>
-        <button mat-menu-item routerLink="/delhi">Delhi</button>
-        <button mat-menu-item routerLink="/goa">Goa</button>
-        <button mat-menu-item routerLink="/jk">Jammu & Kashmir</button>
-      </mat-menu>
-      <button mat-button routerLink="/packages" class=""><mat-icon>book</mat-icon>Packages</button>
-    </div>    
-    <span class="example-spacer"></span>
-    <div class="contact">
-      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-      <p>+91 8130860059</p>
-      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="email"></mat-icon>
-      <p>singhravi74936&#64;gmail.com</p>
-    </div>
-  </mat-toolbar>
-
-
-<!-- <div class="navbar">
-  <a routerLink="#" style="font-size: 22px; color:orange; font-family: 'Times New Roman', Times, serif;">RaviguideInd</a> 
-  <a routerLink="/home">Home</a> 
-  <div class="dropdown">
-    <button class="dropbtn">Destination <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">      
-      <div class="row">
-        <div class="column">         
-          <a routerLink="/rajasthan">Rajasthan</a>
-          <a routerLink="/himachal">Himachal Pradesh</a>
-          <a routerLink="/uttarakhand">Uttarakhand</a>
-          <a routerLink="/delhi">Delhi</a>
-          <a routerLink="/goa">Goa</a>
-          <a routerLink="/jk">Jammu & Kashmir</a>
-        </div>      
-      </div>
-    </div>
-  </div> 
-
-  <a routerLink="/packages" class="menulink">Packages</a>  -->
-  <!-- <a routerLink="/hotels" class="menulink">Hotels</a> -->
-  <!-- <a routerLink="/home" class="menulink">About Us</a>   -->
-
-  <!-- <div class="dropdown">
-    <button class="dropbtn">South India
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">        
-      <div class="row">       
-        <div class="column">        
-          <a routerLink="/kerala">Kerala</a>
-          <a routerLink="/karnataka">Karnataka</a>
-          <a routerLink="/tamilnadu">Tamil Nadu</a>
-          <a routerLink="/rajasthan">Andhra Pradesh</a>          
-       </div>       
-      </div>
-    </div>
-  </div>  -->
-  <!-- <div class="dropdown">
-    <button class="dropbtn">East India
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">      
-      <div class="row">       
-        <div class="column">         
-          <a routerLink="/sikkim">Sikkim</a>
-          <a routerLink="/assam">Assam</a>
-          <a routerLink="/nagaland">Nagaland</a>
-         <a routerLink="/rajasthan">Tripura</a>          
-        </div>       
-      </div>
-    </div>
-  </div>  -->
-  <!-- <div class="dropdown">
-    <button class="dropbtn">West India
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">      
-      <div class="row">
-        <div class="column">           
-            <a routerLink="/gujarat">Gujarat</a>
-            <a routerLink="/maharastra">Maharashtra</a>
-            <a routerLink="/goa">Goa</a>
-          </div>
-      </div>
-    </div>
-  </div>  
-  <div class="dropdown">
-    <button class="dropbtn">More..
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">      
-      <div class="row">
-        <div class="column">           
-            <a routerLink="/gujarat">Nature</a>
-            <a routerLink="/maharastra">Forest</a>
-            <a routerLink="/goa">NationalParks</a>
-            <a routerLink="/gujarat">Beaches</a>
-            <a routerLink="/maharastra">Snow</a>
-            <a routerLink="/goa">Desert</a>
-          </div>
-      </div>
-    </div>
-  </div> -->
-  <!-- <div class="contact">
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
-    <p>+91 8130860059</p>
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="email"></mat-icon>
-    <p>singhravi74936&#64;gmail.com</p>
   </div>
-  
-</div> -->
+  <br>
+
+
+
+
 
  
