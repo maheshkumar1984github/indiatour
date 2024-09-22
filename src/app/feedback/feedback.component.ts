@@ -71,5 +71,7 @@ get sortData() {
     return <any>new Date(b.entrydate) - <any>new Date(a.entrydate);
   });
 }
-
+Cancelfeedback(){
+  this.IsAddfeedBack = false;
+}
 }

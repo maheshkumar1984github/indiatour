@@ -30,6 +30,7 @@ public selectedPckgTypeVal: string = '';
 public selectedCityValue:string ='';
 public selectedspecialValue:string ='';
 public selectedSateValue: string ='';
+public showfilter: boolean = false;
 
   constructor(public dialog: MatDialog){}
   MoreDetails(){
