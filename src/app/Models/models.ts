@@ -21,3 +21,32 @@ export interface commonHome{
     link?: string;  
     }
 
+export interface Ipackage{
+    title?:string;
+    iconsname?:Iicons [];
+    days?: string;
+    citys?:IdestinationLink [];
+    packageType?:string;
+    imgurl?:string;
+    routDetails?:string [];
+    state?:string;
+    specialtourtype?:string;
+    filterCityName? :string [];
+   
+
+}
+
+export interface IdestinationLink{
+    Name?: string;
+    detaillink?:string;
+}
+
+export interface stopingpoints{
+    Name?: string;
+    desc?:string;
+}
+
+export interface Iicons{
+    Name?: string;
+    desc?:string;
+}

@@ -1,13 +1,130 @@
 <div class="container-fluid">
-<div class="row">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-2">
+            <mat-form-field appearance="fill">
+              <mat-label>Days</mat-label>
+              <mat-select   [(ngModel)] ="selectedVal"  multiple>
+                <mat-option *ngFor="let day of daysList" [value]="day">{{day}}</mat-option>
+              </mat-select>
+            </mat-form-field>           
+          </div>
+          <!-- <div class="col-md-2">
+            <mat-form-field appearance="fill">
+              <mat-label>Package Type</mat-label>
+              <mat-select   [(ngModel)] ="selectedPckgTypeVal" multiple>
+                <mat-option *ngFor="let packageType of packageTypeList" [value]="packageType">{{packageType}}</mat-option>
+              </mat-select>
+            </mat-form-field>            
+          </div> -->
+          <div class="col-md-2">
+            <mat-form-field appearance="fill">
+              <mat-label>City</mat-label>
+              <mat-select [(ngModel)] ="selectedCityValue" multiple>
+                <mat-option *ngFor="let city of cityList"  [value]="city">{{city}}</mat-option>
+              </mat-select>
+            </mat-form-field>              
+          </div>
+          <!-- <div class="col-md-2">
+            <mat-form-field appearance="fill">
+              <mat-label>Special Tour</mat-label>
+              <mat-select [(ngModel)] ="selectedspecialValue" multiple>
+                <mat-option *ngFor="let special of specialtourList"  [value]="special">{{special}}</mat-option>
+              </mat-select>
+            </mat-form-field> 
+          </div> -->
+          <div class="col-md-2">
+            <mat-form-field appearance="fill">
+              <mat-label>State</mat-label>
+              <mat-select [(ngModel)] ="selectedSateValue" multiple>
+                <mat-option *ngFor="let state of stateList"  [value]="state">{{state}}</mat-option>
+              </mat-select>
+            </mat-form-field> 
+          </div>
+          <div class="col-md-1" style="margin-top: 15px !important;">           
+              <button mat-raised-button   color="primary" type="button" (click) ="filterPackage()">Apply<mat-icon></mat-icon></button>            
+          </div>
+          <div class="col-md-1"  style="margin-top: 15px !important;">           
+              <button mat-raised-button   color="primary" type="button" (click) ="resetFilter()">Reset<mat-icon>refresh</mat-icon></button>            
+          </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  <div class="row">
+    <div class="col-md-1">
+
+    </div>
+    <div class="col-md-10">
+      <div *ngFor="let pckg of packageData; let ind = index;"> 
+        <mat-card class="card card-chart">
+          <mat-card-header>
+            <mat-card-title>{{pckg.title}}</mat-card-title>
+            <mat-card-subtitle>
+            </mat-card-subtitle>        
+          </mat-card-header> 
+          <mat-card-content>
+            <div class="row">
+              <div class="col-md-5">
+                <img src="{{pckg.imgurl}}" height="300px" width="100%">              
+              </div>
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div *ngFor="let item of pckg.citys"  class="iconrow">
+                      <a mat-stroked-button   color="accent" routerLink="{{item.detaillink}}">{{item.Name}}</a>
+                    </div>                              
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <div class="col-md-12">                                       
+                    <div *ngFor="let icon of pckg.iconsname"  class="iconrow">
+                      <mat-icon aria-hidden="false" aria-label="Example home icon" color="primary" class="" fontIcon="{{icon.Name}}"></mat-icon>{{icon.desc}}
+                    </div>
+                  </div>
+                 
+                  <div class="col-md-12">
+                    <hr>
+                    <mat-horizontal-stepper [linear]="true" #stepper>
+                      <div *ngFor="let item of pckg.routDetails"  class="iconrow">
+                        <mat-step label ="{{item}}"> 
+                          
+                        </mat-step>
+                      </div>
+                    </mat-horizontal-stepper>
+                    <hr>
+                  </div>
+                </div>                
+              </div>            
+            </div>
+          </mat-card-content>      
+          <mat-card-actions align="end">
+            <button mat-raised-button color="primary" (click)="MoreDetails()">More Details</button>&nbsp;&nbsp;&nbsp;
+            <button mat-raised-button color="primary">
+              <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="call"></mat-icon>
+              <span>+91 8130860059</span>
+            </button>
+        </mat-card-actions>
+        </mat-card>  
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  </div>
+
+<!-- <div class="row">
   <div class="col-md-6">
     <mat-card class="card card-chart">
       <mat-card-header>
         <mat-card-title>5 Days/ 4 Night</mat-card-title>
-        <mat-card-subtitle>   <a mat-stroked-button   color="accent" routerLink="/delhi">Delhi</a>
+        <mat-card-subtitle>   
+          <a mat-stroked-button   color="accent" routerLink="/delhi">Delhi</a>
           <a mat-stroked-button   color="accent" routerLink="/home">Aagra</a>
           <a mat-stroked-button  color="accent" routerLink="/rajasthan">Jaipur</a>
-          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="room icon"></mat-icon>
         </mat-card-subtitle>        
       </mat-card-header> 
       <mat-card-content>
@@ -162,6 +279,6 @@
     </mat-card>  
   </div>
 </div>
-</div>
+</div> -->
 
 

@@ -49,8 +49,13 @@ import { GALLERY_CONFIG, GalleryConfig } from 'ng-gallery';
 import { GalleryModule, GalleryItem, ImageItem } from 'ng-gallery';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoaComponent } from './goa/goa.component';
-import {FlexLayoutModule} from '@angular/flex-layout'
-
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { FeedbackComponent } from './feedback/feedback.component'
+import { HttpClientModule } from '@angular/common/http';
+import { HotelsComponent } from './hotels/hotels.component';
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -67,7 +72,9 @@ import {FlexLayoutModule} from '@angular/flex-layout'
     FooterComponent,
     HomeComponent,
     PackagesComponent,
-    GoaComponent
+    GoaComponent,
+    FeedbackComponent,
+    HotelsComponent
   ],
   imports: [
     BrowserModule,
@@ -102,7 +109,11 @@ import {FlexLayoutModule} from '@angular/flex-layout'
     GalleryModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule,
+    MatStepperModule,
+    MatButtonToggleModule,
+    MatRadioModule
   ],
 
   providers: [
@@ -119,3 +130,4 @@ import {FlexLayoutModule} from '@angular/flex-layout'
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

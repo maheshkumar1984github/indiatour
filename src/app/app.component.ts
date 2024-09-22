@@ -4,6 +4,7 @@ import { RegistrationComponent } from '../app/registration/registration.componen
 import {MediaObserver, MediaChange} from '@angular/flex-layout'
 import {Subscription} from 'rxjs'
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +12,7 @@ import {Subscription} from 'rxjs'
 })
 export class AppComponent implements OnInit, OnDestroy {
   title = 'india-tour-with-ravi-ang';
-  // mediaSub :Subscription;
+ 
   constructor(public dialog: MatDialog, public mediaObserver:MediaObserver){
     
   }
@@ -22,9 +23,7 @@ export class AppComponent implements OnInit, OnDestroy {
     });
   }
   ngOnInit(): void {
-    // this.mediaSub = this.mediaObserver.media$.subscribe((result:MediaChange)=>{
 
-    // });
   }
   ngOnDestroy(): void {
     

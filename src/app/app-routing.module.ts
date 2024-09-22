@@ -8,6 +8,7 @@ import { JkComponent } from './jk/jk.component';
 import { HomeComponent } from './home/home.component';
 import { PackagesComponent } from './packages/packages.component';
 import { GoaComponent } from './goa/goa.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 const routes: Routes = [
 {path: 'rajasthan', component: RajasthanComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
 {path: 'home', component: HomeComponent},
 {path: 'packages', component: PackagesComponent},
 {path: 'goa', component: GoaComponent},
+{path: 'feedback', component: FeedbackComponent},
 {path: '', component: HomeComponent},
  ];
 

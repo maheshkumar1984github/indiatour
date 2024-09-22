@@ -12,7 +12,8 @@
             <button mat-menu-item routerLink="/goa">Goa</button>
             <button mat-menu-item routerLink="/jk">Jammu & Kashmir</button>
             <hr>
-            <button mat-button routerLink="/packages" class=""><mat-icon>book</mat-icon>Packages</button>  
+            <button mat-button routerLink="/packages" class=""><mat-icon>book</mat-icon>Packages</button> <br> 
+            <button mat-button routerLink="/feedback" class=""><mat-icon>playlist_add</mat-icon>Add Feedback</button> 
             <hr>
             <button mat-button routerLink="/packages" class=""><mat-icon>call</mat-icon>+91 8130860059</button>
             <button mat-button routerLink="/packages" class=""><mat-icon>email</mat-icon>singhravi74936&#64;gmail.com</button>
@@ -20,8 +21,8 @@
         </button>   
         <span style="color: orangered;">RaviguideInd</span>  
           <button mat-button routerLink="/home" class=""> <mat-icon>home</mat-icon>Home</button>
-          <button mat-button [matMenuTriggerFor]="belowMenu" class=""><mat-icon>place</mat-icon>Destinations</button>
-          <mat-menu #belowMenu="matMenu" yPosition="below">
+          <button mat-button [matMenuTriggerFor]="belowMenudest" class=""><mat-icon>place</mat-icon>Destinations</button>
+          <mat-menu #belowMenudest="matMenu" yPosition="below">
             <button mat-menu-item routerLink="/rajasthan">Rajasthan</button>
             <button mat-menu-item routerLink="/himachal">Himachal Pradesh</button>
             <button mat-menu-item routerLink="/uttarakhand">Uttarakhand</button>
@@ -30,6 +31,7 @@
             <button mat-menu-item routerLink="/jk">Jammu & Kashmir</button>
           </mat-menu>
           <button mat-button routerLink="/packages" class=""><mat-icon>book</mat-icon>Packages</button>   
+          <button mat-button routerLink="/feedback" class=""><mat-icon>playlist_add</mat-icon>Add Feedback</button> 
         <span class="example-spacer"></span> 
            <button mat-button routerLink="/packages" class=""><mat-icon>call</mat-icon>+91 8130860059</button>
             <button mat-button routerLink="/packages" class=""><mat-icon>email</mat-icon>singhravi74936&#64;gmail.com</button> 

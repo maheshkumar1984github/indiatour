@@ -1,0 +1,56 @@
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1">             
+            </div>
+           
+            <div class="col-md-10">
+                
+                  <button mat-stroked-button   color="accent" type="button" (click)="Addfeedback()">Add Feedback<mat-icon>playlist_add</mat-icon></button>
+                  <hr>
+                </div>
+            <div class="col-md-1">             
+            </div>
+        </div>
+        <div *ngIf="IsAddfeedBack">
+            <form [formGroup]="feedbackForm" (submit)="onSubmit()" class="feedback-form">
+                <div class="row">    
+                    <div class="col-md-1"></div>       
+                    <div class="col-md-10">  
+                        <div class="col-md-12">
+                            <div class="">
+                                <mat-form-field appearance="fill">
+                                <mat-label>Name</mat-label>
+                                <input matInput #from_name  placeholder="Name" formControlName="from_name">
+                                </mat-form-field>
+                            </div>
+                        </div>    
+                        <div class="col-md-12">
+                            <div class="">
+                                <mat-form-field appearance="fill" class="feed">
+                                <mat-label>Description</mat-label>
+                                <textarea matInput  placeholder="Add feedback here" formControlName="feedbackDescription" rows="20"></textarea>  
+                                </mat-form-field>
+                            </div>
+                        </div>                
+                        <div class="col-md-12" style="float: right;">
+                            <button mat-raised-button color="accent" type="button" (click)="onSubmit()">Submit</button>    
+                        </div>
+                </div>   
+                <div class="col-md-1"></div>       
+           </div>
+           </form> 
+        </div>
+        
+       <div *ngFor="let feed of feedbackdata">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <hr>
+                <h1>{{feed.description}}</h1>
+                <p> From: {{feed.fromName}}</p>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+       </div>
+</div>

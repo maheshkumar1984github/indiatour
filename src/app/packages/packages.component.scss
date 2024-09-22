@@ -83,3 +83,31 @@ float: left;
 mat-grid-tile {
   background: lightblue;
 }
+.iconrow{
+  display: inline;
+}
+
+.iconcl{
+  width: 50px;
+  height: 50px;
+}
+.mat-horizontal-stepper-header{
+  padding-left: 5px !important;
+}
+::ng-deep .mat-horizontal-stepper-header {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+::ng-deep mat-stepper-horizontal, mat-stepper-horizontal {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper{
+ width: 97% !important;
+}
+
+.matselect{
+  background-color:white
+}
