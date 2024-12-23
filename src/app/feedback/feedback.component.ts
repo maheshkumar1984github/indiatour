@@ -24,7 +24,7 @@ this.feedbackForm = this.formBuilder.group({
   from_name : ['', Validators.required],
   feedbackDescription: ['', Validators.required],
 })
-this.feedbackdata.push({fromName: 'Vinay' ,description: "He is verry nice and honest guy.", entrydate: '9/10/2024, 8:12:24 PM'})
+this.feedbackdata.push({fromName: 'Vinay' ,description: "He is very nice and honest guy.", entrydate: '9/10/2024, 8:12:24 PM'})
 this.localstorageData = localStorage.getItem('dataSource');
 if(this.localstorageData){
   this.feedbackdata =[];
