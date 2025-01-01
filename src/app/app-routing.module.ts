@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { PackagesComponent } from './packages/packages.component';
 import { GoaComponent } from './goa/goa.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { VideogalaryComponent } from './videogalary/videogalary.component';
 
 const routes: Routes = [
 {path: 'rajasthan', component: RajasthanComponent},
@@ -20,6 +21,8 @@ const routes: Routes = [
 {path: 'packages', component: PackagesComponent},
 {path: 'goa', component: GoaComponent},
 {path: 'feedback', component: FeedbackComponent},
+{path: 'videpgalary', component: VideogalaryComponent},
+
 {path: '', component: HomeComponent},
  ];
 

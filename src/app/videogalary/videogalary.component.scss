@@ -1,0 +1,18 @@
+.vd-item {
+    position: relative;
+    .vd-item-text {
+        position: absolute;
+        right: 15%;
+        bottom: 1.25rem;
+        left: 15%;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        color: #fff;
+        text-align: center;
+        
+        h5 ,p{
+            font-size: large !important;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    }
+} 
