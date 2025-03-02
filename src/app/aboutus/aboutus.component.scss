@@ -1,0 +1,31 @@
+.cntr {
+    width: 100%;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px gray;
+    float: right; 
+}
+h1 {
+    color: #333;
+}
+.contact {
+    margin-top: 10px;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border-radius: 5px;
+    clear: right;
+}
+.bgimg{
+    background-image: url("../../assets/images/ravi2.jpg");
+    background-repeat: no-repeat;
+    float: right;
+    background-position-x: 850px;
+}
+img {
+    float: right;
+    border-radius: 15px;
+    padding: 10px;
+  }

@@ -4,6 +4,13 @@
         <div class="col-md-1"></div>
         <div class="col-md-10">
             <h1>Himachal</h1>
+            <p>Himachal Pradesh, nestled in the lap of the Himalayas, is a dream destination for nature lovers, adventure seekers, and spiritual travelers. With snow-capped mountains, lush valleys, and serene monasteries, this state offers an unforgettable experience.
+
+                Start your journey in Shimla, the Queen of Hills, where the Mall Road, Jakhoo Temple, and Kufri provide a perfect blend of colonial charm and scenic beauty. Head to Manali, a haven for adventure lovers, with attractions like Solang Valley, Rohtang Pass, and Hadimba Temple.
+                
+                For a spiritual retreat, visit Dharamshala and McLeod Ganj, home to the Dalai Lama and serene monasteries. The quaint town of Dalhousie offers stunning views of the Dhauladhar range, while Khajjiar, known as the “Mini Switzerland of India,” mesmerizes with its lush meadows.
+                
+                Explore the picturesque valleys of Kullu, Spiti, and Kinnaur, where untouched beauty and rich Tibetan culture captivate travelers. If you love trekking, the Triund, Hampta Pass, and Kheerganga trails are a must.</p>
             <div class="" *ngFor="let item of rjdata">
                 <div>
                     <div class="dataimg">
@@ -17,7 +24,7 @@
                                 [config]="slideConfig" >
                                 <div ngxSlickItem *ngFor="let chileitem of item.childImage" class="slide">
                                 <p>{{chileitem.locationName}}</p>
-                                <img src="{{chileitem.imgSrc}}" alt="" width="100%" height="550px">
+                                <img src="{{chileitem.imgSrc}}" alt="{{item.locationName}}" width="100%" height="550px">
                                 <p>{{chileitem.locationDescription}}</p>
                                 </div>
                                 </ngx-slick-carousel>                       
@@ -30,7 +37,14 @@
         <div class="col-md-1"></div>
     </div>
    
-    
+    <div class="row">
+
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <app-othercities></app-othercities>
+        </div>
+
+    </div>
 </div>
 
 

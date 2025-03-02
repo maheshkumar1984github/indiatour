@@ -19,6 +19,7 @@ export interface commonHome{
     imgUrl?: string; 
     description?: string;
     link?: string;  
+    alt?:string;
     }
 
 export interface Ipackage{

@@ -6,6 +6,17 @@
         </div>
         <div class="col-md-10">
             <h1>Goa</h1>
+            <p>
+                Goa, India's smallest state, is a vibrant mix of sun-kissed beaches, Portuguese heritage, and electrifying nightlife. Known for its laid-back vibe, this coastal gem attracts travelers from across the world.
+
+                The beaches of Goa, from the bustling Baga and Anjuna to the serene Palolem and Agonda, offer something for every kind of traveler. Adventure seekers can indulge in water sports, while those looking for relaxation can enjoy beachside shacks serving delicious seafood and refreshing cocktails.
+
+                Goa’s rich history is evident in its centuries-old churches, forts, and colonial architecture. The Basilica of Bom Jesus, a UNESCO World Heritage Site, and the picturesque Chapora Fort are must-visits. The state's vibrant culture is reflected in its festivals, like the lively Carnival and Sunburn music festival.
+
+              Beyond the beaches, Goa’s spice plantations, waterfalls, and backwaters offer a refreshing escape. The local cuisine, a fusion of Indian and Portuguese flavors, is a treat for food lovers, with dishes like Goan fish curry and Bebinca stealing the show.
+
+                Whether you're a party enthusiast, a history buff, or a nature lover, Goa has something magical to offer. It's a destination that promises unforgettable memories and endless sunshine!
+            </p>
             <div class="" *ngFor="let item of rjdata">
                 <div>
                     <div class="dataimg">
@@ -19,7 +30,7 @@
                                 [config]="slideConfig" >
                                 <div ngxSlickItem *ngFor="let chileitem of item.childImage" class="slide">
                                 <p>{{chileitem.locationName}}</p>
-                                <img src="{{chileitem.imgSrc}}" alt="" width="100%" height="550px">
+                                <img src="{{chileitem.imgSrc}}" alt="{{item.locationName}}" width="100%" height="550px">
                                 <p>{{chileitem.locationDescription}}</p>
                                 </div>
                                 </ngx-slick-carousel>                       
@@ -33,8 +44,14 @@
 
         </div>
     </div>
-    
-</div>
+    <div class="row">
 
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <app-othercities></app-othercities>
+        </div>
+
+    </div>
+</div>
 
 

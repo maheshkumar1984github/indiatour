@@ -7,6 +7,15 @@
                 <div class="col-md-10">
                     <div class="div">
                         <h1>Delhi</h1>
+                        <p>Delhi, the heart of India, is a city where history meets modernity. From grand monuments to bustling markets and vibrant nightlife, Delhi offers an unforgettable experience for every traveler.
+
+                            Start your journey with the majestic Red Fort, a UNESCO World Heritage Site that echoes Mughal grandeur. Just nearby, visit Jama Masjid, one of India’s largest mosques, and savor delicious street food in Chandni Chowk. Pay homage at Raj Ghat, the memorial of Mahatma Gandhi.
+                            
+                            Head to India Gate, a war memorial surrounded by lush lawns, and explore the grandeur of Rashtrapati Bhavan and Parliament House. History lovers must visit Humayun’s Tomb and Qutub Minar, both remarkable architectural marvels. The serene Lotus Temple and the grand Akshardham Temple offer spiritual peace.
+                            
+                            For shopping and nightlife, explore Connaught Place, Sarojini Nagar, and Dilli Haat. Hauz Khas Village and Cyber Hub are perfect for trendy cafes and vibrant nightlife. Nature lovers can unwind at Lodhi Garden or Yamuna Ghat for a peaceful escape.
+                            
+                            Whether you seek history, spirituality, food, or shopping, Delhi has something for everyone. A visit to India’s capital is an experience filled with culture, energy, and charm!</p>
                     </div>
                     
                     <div class="" *ngFor="let item of rjdata">
@@ -22,7 +31,7 @@
                                         [config]="slideConfig" >
                                         <div ngxSlickItem *ngFor="let chileitem of item.childImage" class="slide">
                                         <p>{{chileitem.locationName}}</p>
-                                        <img src="{{chileitem.imgSrc}}" alt="" width="100%" height="550px">
+                                        <img src="{{chileitem.imgSrc}}" alt="{{item.locationName}}" width="100%" height="550px">
                                         <p>{{chileitem.locationDescription}}</p>
                                         </div>
                                         </ngx-slick-carousel>                       
@@ -35,6 +44,15 @@
                 <div class="col-md-1">
 
                 </div>
+                
+            </div>
+            <div class="row">
+
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <app-othercities></app-othercities>
+                </div>
+
             </div>
             
         </div>

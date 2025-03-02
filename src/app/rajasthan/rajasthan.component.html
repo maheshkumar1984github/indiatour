@@ -5,6 +5,13 @@
         <div class="col-md-10">
             <div>
                 <h1>Rajasthan</h1>
+                <p>Rajasthan, the "Land of Kings," is a must-visit destination for travelers seeking history, culture, and breathtaking landscapes. From grand palaces to golden deserts, this state offers a mesmerizing experience.
+
+                    Start your journey in Jaipur, the Pink City, known for the magnificent Amber Fort, City Palace, and the iconic Hawa Mahal. Head to Udaipur, the City of Lakes, where the Lake Palace and Jag Mandir offer a romantic setting. In Jodhpur, the Blue City, explore the majestic Mehrangarh Fort and the bustling bazaars.
+                    
+                    For a desert adventure, visit Jaisalmer, home to the stunning Golden Fort and thrilling camel safaris in the Thar Desert. Pushkar, famous for its holy lake and the world-renowned camel fair, is a spiritual retreat. Ranthambore National Park offers a chance to spot majestic tigers in the wild, while Mount Abu, Rajasthan’s only hill station, provides a cool escape.
+                    
+                    Don’t miss Chittorgarh and Bikaner, rich in history and heritage. The vibrant festivals, mouthwatering cuisine, and warm hospitality make Rajasthan an unforgettable experience. Whether you seek adventure, history, or tranquility, Rajasthan has it all!</p>
              </div>   
             <div class="" *ngFor="let item of rjdata">
                 <div>
@@ -17,7 +24,7 @@
                                 [config]="slideConfig" >
                                 <div ngxSlickItem *ngFor="let chileitem of item.childImage" class="slide">
                                 <p>{{chileitem.locationName}}</p>
-                                <img src="{{chileitem.imgSrc}}" alt="" width="100%" height="600px">
+                                <img src="{{chileitem.imgSrc}}" alt="{{item.locationName}}" width="100%" height="600px">
                                 <p>{{chileitem.locationDescription}}</p>
                                 </div>
                                 </ngx-slick-carousel>                       
@@ -33,7 +40,16 @@
          </div>       
          <div class="col-md-1"></div> 
     </div>
+    <div class="row">
+
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <app-othercities></app-othercities>
+        </div>
+
+    </div>
      
 </div>
+
 
 

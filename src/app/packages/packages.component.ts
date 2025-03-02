@@ -35,15 +35,15 @@ public showfilter: boolean = false;
   constructor(public dialog: MatDialog){}
   MoreDetails(){
     let dialogRef = this.dialog.open(RegistrationComponent, {
-      height: '550px',
-      width: '900px',
+      height: '650px',
+      width: '1000px',
     });
   }
 
   ngOnInit(){
     this.packageData.push(
       {
-        title:'1D/1N',
+        title:'Delhi to Aagra',
         citys:[
           {Name:'Delhi',detaillink: '/delhi'},
           {Name:'Aagra',detaillink: '/home'},
@@ -56,7 +56,7 @@ public showfilter: boolean = false;
           { Name:'camera',desc:'Sightseeing'},
 
         ],
-        days: '1-2',
+        days: 'Delhi',
         packageType:'Family Package',
         imgurl:'../../assets/images/tajmahal.jpeg',
         routDetails:['Delhi','Mathura','Aagra'],
@@ -65,7 +65,7 @@ public showfilter: boolean = false;
         filterCityName:['Delhi','Aagra']
       },
       {
-        title:'3D/2N',
+        title:'Rishikesh',
         citys:[
           {Name:'Rishikesh',detaillink: '/uttarakhand'},         
         ],
@@ -86,7 +86,7 @@ public showfilter: boolean = false;
         filterCityName:['Rishikesh']
       },
       {
-        title:'3D/2N',
+        title:'Jim Corbet National Park',
         citys:[
           {Name:'Jim Corbet',detaillink: '/uttarakhand'},
         ],
@@ -97,7 +97,7 @@ public showfilter: boolean = false;
           { Name:'accessibility',desc:'Drive'},
           { Name:'camera',desc:'Sightseeing'},
         ],
-        days: '2-3',
+        days: 'Jim Corbet National Park',
         packageType:'Family Package',
         imgurl:'../../assets/images/UK/jim Corbet7.jpeg',
         routDetails:['Delhi','Jim Corbet National Park'],
@@ -106,7 +106,7 @@ public showfilter: boolean = false;
          filterCityName:['Jim Corbet']
       },
       {
-        title:'4D/3N',
+        title:'Manali',
         citys:[
           {Name:'Manali',detaillink: '/himachal'},
           {Name:'Solang Valley',detaillink: '/himachal'},
@@ -128,7 +128,7 @@ public showfilter: boolean = false;
         filterCityName:['Manali','Solang Valley']
       },
       {
-        title:'4D/3N',
+        title:'Rohtang Pass',
         citys:[
           {Name:'Manali',detaillink: '/himachal'},
           {Name:'Sissu',detaillink: '/himachal'},
@@ -151,7 +151,7 @@ public showfilter: boolean = false;
          filterCityName:['Manali','Sissu','Rohtang']
       },
       {
-        title:'2D/2N',
+        title:'Nanital',
         citys:[
           {Name:'Nanital',detaillink: '/uttarakhand'},
          
@@ -173,7 +173,7 @@ public showfilter: boolean = false;
         filterCityName:['Nanital']
       },
        {
-        title:'2D/2N',
+        title:'Mussoorie',
         citys:[
           {Name:'Mussoorie',detaillink: '/uttarakhand'},
          
@@ -195,7 +195,7 @@ public showfilter: boolean = false;
         filterCityName:['Mussoorie']
       },
       {
-        title:'5D/4N',
+        title:'Srinagar',
         citys:[
           {Name:'Srinagar',detaillink: '/jk'},
           {Name:'Gulmarg',detaillink: '/jk'},
@@ -218,7 +218,7 @@ public showfilter: boolean = false;
         filterCityName:['Srinagar','Gulmarg']
       },
       {
-        title:'5D/4N',
+        title:'Sonmarg',
         citys:[
           {Name:'Srinagar',detaillink: '/jk'},
           {Name:'Sonmarg',detaillink: '/jk'},
@@ -240,7 +240,7 @@ public showfilter: boolean = false;
         filterCityName:['Srinagar','Sonmarg']
       },
       {
-        title:'3/2N',
+        title:'Jaipur',
         citys:[
           {Name:'Jaipur',detaillink: '/rajasthan'},         
          
@@ -273,7 +273,7 @@ public showfilter: boolean = false;
           { Name:'accessibility',desc:'Drive'},
           { Name:'camera',desc:'Sightseeing'},
         ],
-        days: '4-5',
+        days: 'Ranthambore National Park',
         packageType:'Family Package',
         imgurl:'../../assets/images/rajasthan/rantham3.jpeg',
         routDetails:['Delhi','Ranthambore'],

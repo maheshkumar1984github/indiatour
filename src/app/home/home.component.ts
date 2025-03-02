@@ -14,6 +14,7 @@ export class HomeComponent {
   rjdata: CommonData [] = [];
   homedata: commonHome [] = [];
   hoteldata: commonHome [] = [];
+  headerData: commonHome [] = [];
   // @ViewChild('slickModal', { static: true });
   @ViewChild('slickModal', { static: true }) slickModal: SlickCarouselComponent;
   slideConfig = {
@@ -34,6 +35,17 @@ constructor(){
 }
 
   ngOnInit(){
+    this.headerData.push(
+      {imgUrl:"../../assets/images/tajmahal.jpeg", alt:"Taj Mahal"},
+      {imgUrl:"../../assets/images/jk/dallake1.jpeg", alt:"Dal-Lake"},
+      {imgUrl:"../../assets/images/delhi/delhi-lotas.jpg", alt:"Lotos Temple"},
+      {imgUrl:"../../assets/images/rajasthan/hawamahal2.jpeg", alt:"Hawamahal"},
+      {imgUrl:"../../assets/images/rajasthan/rantham3.jpeg", alt:"Ranthambore  National Park"},
+      {imgUrl:"../../assets/images/UK/Massuri5.jpeg", alt:"Mussoorie "},
+      {imgUrl:"../../assets/images/rajasthan/jalmahal4.jpeg", alt:"JalMahal"},
+      {imgUrl:"../../assets/images/jk/gulmarg1.jpeg", alt:"Gulmarge"},
+
+    )
 
     this.images = [
       new ImageItem({ src: '../../assets/images/tajmahal.jpeg', thumb: '../../assets/images/tajmahal.jpeg'}),

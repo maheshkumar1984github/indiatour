@@ -3,6 +3,15 @@
             <div class="col-md-1"></div>
             <div class="col-md-10">
                 <h1>Jammu & Kashmir</h1>
+                <p>Kashmir, often called "Paradise on Earth," is a dream destination known for its breathtaking landscapes, pristine lakes, and snow-capped mountains. Whether you seek adventure, tranquility, or cultural experiences, Kashmir has it all.
+
+                    Start your journey in Srinagar, where the mesmerizing Dal Lake offers Shikara rides and luxurious houseboats. Visit the famous Mughal Gardens—Shalimar Bagh, Nishat Bagh, and Chashme Shahi, showcasing Persian-style beauty. Don’t miss the grand Shankaracharya Temple with panoramic city views.
+                    
+                    For adventure lovers, Gulmarg is a must-visit, known for Asia’s highest Gondola ride, skiing, and snowboarding. In summer, its meadows bloom with vibrant flowers. Pahalgam, a scenic valley, is perfect for trekking and river rafting in the Lidder River. Visit Betaab Valley and Aru Valley for stunning natural beauty.
+                    
+                    Sonmarg, the “Meadow of Gold,” offers breathtaking glaciers, lush meadows, and the starting point of the Thajiwas Glacier trek. If you love offbeat travel, explore Kupwara, Yusmarg, and Doodhpathri, untouched by crowds.
+                    
+                    Experience Kashmir’s rich culture, warm hospitality, and mouthwatering cuisine like Rogan Josh, Kahwa, and Wazwan. Whether visiting in summer or winter, Kashmir promises an unforgettable experience in every season!</p>
                 <hr>
                 <div class="">
                     <div class="" *ngFor="let item of data">
@@ -15,7 +24,7 @@
                                         [config]="slideConfig" >
                                         <div ngxSlickItem *ngFor="let chileitem of item.childImage" class="slide">
                                         <p>{{chileitem.locationName}}</p>
-                                        <img src="{{chileitem.imgSrc}}" alt="" width="100%" height="550px">
+                                        <img src="{{chileitem.imgSrc}}" alt="{{item.locationName}}" width="100%" height="550px">
                                         <p>{{chileitem.locationDescription}}</p>
                                         </div>
                                         </ngx-slick-carousel>                       
@@ -29,7 +38,14 @@
         <div class="col-md-1"></div>   
     </div>
    
-    
+    <div class="row">
+
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <app-othercities></app-othercities>
+        </div>
+
+    </div>
 </div>
 
 

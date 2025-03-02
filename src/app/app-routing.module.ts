@@ -10,6 +10,8 @@ import { PackagesComponent } from './packages/packages.component';
 import { GoaComponent } from './goa/goa.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { VideogalaryComponent } from './videogalary/videogalary.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 const routes: Routes = [
 {path: 'rajasthan', component: RajasthanComponent},
@@ -22,7 +24,8 @@ const routes: Routes = [
 {path: 'goa', component: GoaComponent},
 {path: 'feedback', component: FeedbackComponent},
 {path: 'videpgalary', component: VideogalaryComponent},
-
+{path: 'registration', component: RegistrationComponent},
+{path: 'aboutus', component: AboutusComponent},
 {path: '', component: HomeComponent},
  ];
 

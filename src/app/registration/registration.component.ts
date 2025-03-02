@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { Router } from '@angular/router';
+import {ChangeDetectionStrategy} from '@angular/core';
+import {provideNativeDateAdapter} from '@angular/material/core';
+
+
 
 @Component({
   selector: 'app-registration',
   templateUrl: './registration.component.html',
-  styleUrl: './registration.component.scss'
+  styleUrl: './registration.component.scss',
+  providers: [provideNativeDateAdapter()],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegistrationComponent {
   registerForm: FormGroup;
@@ -13,7 +20,9 @@ export class RegistrationComponent {
   submitted = false;
   selected = ''
 
-  constructor(private formBuilder: FormBuilder,) {  
+  @ViewChild("picker") datepicker:ElementRef;
+
+  constructor(private formBuilder: FormBuilder, private router: Router) {  
 }
 ngOnInit() {
   emailjs.init('XfQuclXGziFGOssM1');
@@ -21,9 +30,11 @@ ngOnInit() {
       from_Name: ['', Validators.required],
       from_contact: ['', Validators.required],
       from_countary: [''],
-      from_email: ['', Validators.required],
+      from_email: [''],
       Noofperson:[''],
-      from_Otherdetails:['']
+      from_Otherdetails:[''],
+      start_date:[''],
+      end_date:['']
   });
 }
 get f() { return this.registerForm.controls; }
@@ -31,6 +42,8 @@ get f() { return this.registerForm.controls; }
 async onSubmit() {
   // this.submitted = true;
     if (this.registerForm.valid) {
+      var sdate = new Date(this.registerForm.value.start_date).toLocaleDateString();
+      var edate = new Date(this.registerForm.value.end_date).toLocaleDateString();
       let responce = await emailjs.send("service_75btl4q","template_j22t19o",{
       from_name:this.registerForm.value.from_Name,
       contact: this.registerForm.value.from_contact,
@@ -38,6 +51,7 @@ async onSubmit() {
       countary: this.selected,
       Noofperson: this.registerForm.value.Noofperson,
       from_Otherdetails: this.registerForm.value.from_Otherdetails,
+      dates_to_visit:sdate + '-' + edate
       });
 
       alert('Details submitted successfully. Thank you');
@@ -48,6 +62,9 @@ async onSubmit() {
       return;
   }
 }
+ public oncancel(){
+  this.router.navigateByUrl('/home');
+ }
 
  public  countryList = [
   {"name": "Afghanistan", "code": "AF"},

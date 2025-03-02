@@ -57,6 +57,10 @@ import {MatStepperModule} from '@angular/material/stepper';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 import {MatRadioModule} from '@angular/material/radio';
 import { VideogalaryComponent } from './videogalary/videogalary.component';
+import { OthercitiesComponent } from './othercities/othercities.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+
+
 
 @NgModule({
   declarations: [
@@ -76,7 +80,9 @@ import { VideogalaryComponent } from './videogalary/videogalary.component';
     GoaComponent,
     FeedbackComponent,
     HotelsComponent,
-    VideogalaryComponent
+    VideogalaryComponent,
+    OthercitiesComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,

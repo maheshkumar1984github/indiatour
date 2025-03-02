@@ -5,6 +5,17 @@
         </div>
         <div class="col-md-10">
             <h1>Uttrakhand</h1>
+            <p>Uttarakhand, also known as “Devbhoomi” (Land of the Gods), is a paradise for travelers seeking spirituality, adventure, and scenic beauty. Nestled in the Himalayas, this state is home to stunning hill stations, sacred temples, and breathtaking landscapes.
+
+                Start your journey in Nainital, the “Lake District of India,” where Naini Lake, Snow Viewpoint, and The Mall Road offer a serene escape. Mussoorie, the “Queen of Hills,” charms visitors with Kempty Falls, Camel’s Back Road, and Gun Hill.
+                
+                For spiritual seekers, Haridwar and Rishikesh are must-visit destinations. Witness the divine Ganga Aarti at Har Ki Pauri, or experience yoga and river rafting in Rishikesh, the world’s yoga capital. The Char Dham Yatra—visiting Badrinath, Kedarnath, Gangotri, and Yamunotri—is a sacred pilgrimage attracting millions.
+                
+                Adventure enthusiasts can trek in Chopta, Valley of Flowers, and Roopkund, or enjoy skiing in Auli, India’s premier ski resort. Jim Corbett National Park, India’s oldest wildlife sanctuary, offers thrilling jungle safaris.
+                
+                For offbeat travel, explore Munsiyari, Kausani, and Lansdowne, where tranquility meets stunning mountain views. Whether you seek adventure, spirituality, or relaxation, Uttarakhand promises an unforgettable experience! 
+                              
+                </p>
             <hr>
             <div class="">
                 <div class="" *ngFor="let item of data">
@@ -17,7 +28,7 @@
                                     [config]="slideConfig" >
                                     <div ngxSlickItem *ngFor="let chileitem of item.childImage" class="slide">
                                     <p>{{chileitem.locationName}}</p>
-                                    <img src="{{chileitem.imgSrc}}" alt="" width="100%" height="550px">
+                                    <img src="{{chileitem.imgSrc}}" alt="{{item.locationName}}" width="100%" height="550px">
                                     <p class="locatinDesc">{{chileitem.locationDescription}}</p>
                                     </div>
                                     </ngx-slick-carousel>                       
@@ -30,6 +41,14 @@
         </div>
         <div class="col-md-1">
 
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <app-othercities></app-othercities>
         </div>
 
     </div>
